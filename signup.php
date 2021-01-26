@@ -38,9 +38,11 @@ session_start();
 <body>
 
 	<style type="text/css">
-	
+*{
+		background: black;
+	}
 	#text{
-
+		color:white;
 		height: 25px;
 		border-radius: 5px;
 		padding: 4px;
@@ -49,9 +51,9 @@ session_start();
 	}
 
 	#button{
-
+        border-radius: 16px;
 		padding: 10px;
-		width: 100px;
+		width: 70px;
 		color: white;
 		background-color: lightblue;
 		border: none;
@@ -59,13 +61,10 @@ session_start();
 
 	#box{
 
-		background-color: grey;
 		margin: auto;
 		width: 300px;
 		padding: 20px;
-	}
-
-	</style>
+	}	</style>
 
 	<div id="box">
 		

@@ -54,9 +54,11 @@ session_start();
 <body>
 
 	<style type="text/css">
-	
+	*{
+		background: black;
+	}
 	#text{
-
+		color:white;
 		height: 25px;
 		border-radius: 5px;
 		padding: 4px;
@@ -65,9 +67,9 @@ session_start();
 	}
 
 	#button{
-
+        border-radius: 16px;
 		padding: 10px;
-		width: 100px;
+		width: 70px;
 		color: white;
 		background-color: lightblue;
 		border: none;
@@ -75,7 +77,6 @@ session_start();
 
 	#box{
 
-		background-color: grey;
 		margin: auto;
 		width: 300px;
 		padding: 20px;
@@ -90,7 +91,7 @@ session_start();
 
 			<input id="text" type="text" name="user_name" placeholder="Name"><br><br>
 			<input id="text" type="password" name="password" placeholder="Password"><br><br>
-           			
+
 
 			<input id="button" type="submit" value="Login"><br><br>
 
