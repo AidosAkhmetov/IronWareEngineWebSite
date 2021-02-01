@@ -1,7 +1,20 @@
 *{
     padding: 0;
     margin: 0;
-}ul {
+}
+.ask-btn {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+ul {
   font-weight: bold;
   list-style-type: none;
   margin: 0;
@@ -49,7 +62,33 @@ li.dropdown {
 }
 
 .dropdown-content a:hover {background-color: #f1f1f1;}
-
+#download{
+    background-color: blue;
+    color:white;
+}
 .dropdown:hover .dropdown-content {
   display: block;
 }
+.slider {
+    height: 500px;
+    margin-left: 20px auto;
+    }
+
+img {
+    width: 100%;
+    height: 100%;
+    animation: ani 2s linear;
+}
+
+@keyframes ani {
+0% {
+    transform: scale(1.2);
+    }
+10% {
+    transform: scale(1);
+}
+100% {
+    transform: scale(1);
+}
+}
+

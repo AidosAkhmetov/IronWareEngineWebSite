@@ -12,7 +12,7 @@ session_start();
 <html>
 <head>
 	<title>Main</title>
-	<link rel="stylesheet" href="css/style.css ">
+	<link rel="stylesheet" href="css/style.css">
 	<script src="js/index.js"></script>
 </head>
 <body>
@@ -35,31 +35,4 @@ session_start();
   		</li>
   		<li style="float: right"><a  id="download" href="#">Download</a></li>
   		
-	</ul>	
-
-  <div class="slider">
-
-    <div id="img">
-      <img src="img/maxresdefault.jpg">
-    </div>
-
-  </div>
-<script type="text/javascript">
-	var images = ['img/far.jpg'];
-    var x = 0;
-    var imgs = document.getElementById('img');
-    setInterval(slider, 3000);
-    function slider() {
-
-      if (x < images.length) {
-        x = x + 1;
-      } else {
-        x = 1;
-      }
-      imgs.innerHTML = "<img src=" + images[x - 1] + ">";
-
-
-    }
-</script>
-</body>
-</html>
+	</ul>
