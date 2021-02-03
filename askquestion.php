@@ -36,3 +36,29 @@ session_start();
   		<li style="float: right"><a  id="download" href="#">Download</a></li>
   		
 	</ul>
+<div class="forma">
+<p><strong>Tip:</strong> Use the resize property to prevent textareas from being resized (disable the "grabber" in the bottom right corner):</p>
+
+<form>
+  <textarea>Some text...</textarea>
+</form>
+</div>
+<style>
+.forma{
+  text-align: center;
+} 
+textarea {
+  width: 30%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+</style>
+
+</body>
+</html>

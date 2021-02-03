@@ -37,8 +37,46 @@ session_start();
   		<li style="float: right"><a  id="download" href="#">Download</a></li>
   		
 	</ul>	
-  <div class="ask">
-  <a href="askquestion.php" class="ask-btn">Ask question</a>
+
+ 
+
+<div class="clearfix">
+  <div class="box">
+  <b>ADVERTISING</b>
+  </div>
+  
+  <div class="box">
+
+  <a href="#">How to use functions</a>
+  </div>
+  
+  <div class="box">
+    <div class="ask">
+      <a href="askquestion.php" class="ask-btn">Ask question</a>
+    </div> 
+  </div>
 </div>
+
+
+ <style>
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  float: left;
+  width: 33.33%;
+  padding: 50px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>     
+
+
+  
 </body>
 </html>

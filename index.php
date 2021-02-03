@@ -44,11 +44,12 @@ session_start();
     </div>
 
   </div>
+  
 <script type="text/javascript">
-	var images = ['img/far.jpg'];
+	var images = ['img/far.jpg','img/fifa.jpg'];
     var x = 0;
     var imgs = document.getElementById('img');
-    setInterval(slider, 3000);
+    setInterval(slider, 4000);
     function slider() {
 
       if (x < images.length) {
