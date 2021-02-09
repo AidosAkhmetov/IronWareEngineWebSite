@@ -1,22 +1,7 @@
-   var images = ['img/far.jpg','img/fifa.jpg'];
+<div class="slider">
 
-    var x = 0;
+    <div id="img">
+      <img src="img/maxresdefault.jpg">
+    </div>
 
-    var imgs = document.getElementById('img');
-
-    setInterval(slider, 2000);
-
-
-    function slider() {
-
-      if (x < images.length) {
-        x = x + 1;
-      } else {
-        x = 1;
-      }
-
-
-      imgs.innerHTML = "<img src=" + images[x - 1] + ">";
-
-
-    }
+  </div>
