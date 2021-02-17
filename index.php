@@ -33,34 +33,53 @@ session_start();
 
     	</div>
   		</li>
-  		<li style="float: right"><a  id="download" href="#">Download</a></li>
-  		
+  		<!--<li style="float: right"><a  id="download" href="#">Download</a></li-->
+  		<li style="float: right"><a href="test.exe" download="test" id="download">Download</a></li>
 	</ul>	
 
-  <div class="slider">
-
-    <div id="img">
-      <img src="img/maxresdefault.jpg">
-    </div>
-
-  </div>
   
 <script type="text/javascript">
-	var images = ['img/far.jpg','img/fifa.jpg'];
-    var x = 0;
-    var imgs = document.getElementById('img');
-    setInterval(slider, 4000);
-    function slider() {
-
-      if (x < images.length) {
-        x = x + 1;
-      } else {
-        x = 1;
-      }
-      imgs.innerHTML = "<img src=" + images[x - 1] + ">";
-
-
-    }
 </script>
+
+<section>
+        <div class="contact">
+            <div class="grid">
+               
+                <div class="right">
+                   
+                    <h1>Yernar Aldabergenov</h1>
+                    <h3>Graphics Programmer</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ea aperiam dicta minima dolores excepturi porro modi ad ut animi saepe, libero corrupti omnis unde earum iste voluptates veritatis voluptatibus!</p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="contact">
+            <div class="grid">
+              
+                <div class="right">
+                   
+                    <h1>Yerdaulet Nurlan</h1>
+                    <h3>Java Programmer</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ea aperiam dicta minima dolores excepturi porro modi ad ut animi saepe, </p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="contact">
+            <div class="grid">
+                
+                <div class="right">
+                   
+                    <h1>Aidos Akhmetov</h1>
+                    <h3>Python and Web </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ea aperiam dicta minima dolores excepturi porro modi ad ut animi saepe asdasdasd</p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 </body>
 </html>
