@@ -14,7 +14,7 @@ session_start();
 	<title>Main</title>
 	<link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/community.css">
-	<script src="js/index.js"></script>
+	
 </head>
 <body>
 
@@ -48,6 +48,7 @@ session_start();
   <div class="box">
 
   <a href="#">How to use functions</a>
+   
   </div>
   
   <div class="box">
@@ -57,7 +58,14 @@ session_start();
   </div>
 </div>
 
+<div class="content">
+  <p><button id="add">Add Content</button></p>
+  <div class="push"></div>
+</div>
 
+<footer class="footer">
+  Footer 
+</footer>
  <style>
 * {
   box-sizing: border-box;
@@ -74,9 +82,22 @@ session_start();
   clear: both;
   display: table;
 }
+.content {
+  padding: 20px;
+  min-height: 100%;
+  margin: 0 auto -50px;
+}
+.footer,
+.push {
+  height: 50px;
+}
 </style>     
 
-
+<script>
+   $("#add").on("click", function() {
+  $("<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>").appendTo(".content-inside");
+   }); 
+  </script>
   
 </body>
 </html>
