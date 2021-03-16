@@ -39,6 +39,7 @@ session_start();
 	</ul>	
 
  
+<script type="js/search.js"></script>
 
 <div class="clearfix">
   <div class="box">
@@ -46,8 +47,17 @@ session_start();
   </div>
   
   <div class="box">
+   <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search" title="Type in a name">  
+    <ul id="myUL">
+    <li><a href="#">How to get started</a></li>
+  
+    <li><a href="#">Create actor</a></li>
+    <li><a href="#">Visibility</a></li>
 
-  <a href="#">How to use functions</a>
+    <li><a href="#">How to find sum result</a></li>
+    <li><a href="#">How to use functions</a></li>
+</ul>
+
    
   </div>
   
@@ -58,14 +68,6 @@ session_start();
   </div>
 </div>
 
-<div class="content">
-  <p><button id="add">Add Content</button></p>
-  <div class="push"></div>
-</div>
-
-<footer class="footer">
-  Footer 
-</footer>
  <style>
 * {
   box-sizing: border-box;
