@@ -2,9 +2,7 @@
     padding: 0;
     margin: 0;
 }
-<<<<<<< HEAD
 
-=======
 .ask-btn {
   background-color: #4CAF50;
   border: none;
@@ -18,7 +16,6 @@
   cursor: pointer;
   height: 50px;
 }
->>>>>>> temp
 ul {
   font-weight: bold;
   list-style-type: none;
@@ -149,7 +146,6 @@ section{
     }
 }
 
-<<<<<<< HEAD
 @import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 *{
     margin: 0;
@@ -240,8 +236,6 @@ footer .end{
 }
 
 }
-=======
-
 
 
 /*SLIDER*/
@@ -273,4 +267,3 @@ footer .end{
         transform: scale(1);
       }
     }
->>>>>>> temp
