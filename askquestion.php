@@ -13,6 +13,7 @@ session_start();
 <head>
 	<title>Main</title>
 	<link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/askquestion.css">
 	<script src="js/index.js"></script>
 </head>
 <body>
@@ -36,13 +37,28 @@ session_start();
   		<li style="float: right"><a  id="download" href="#">Download</a></li>
   		
 	</ul>
+  <form action="insert_question.php" class="main">
+    <br>
+  <label for="title">Title:</label><br>
+
+  <input type="text" id="title" name="title"><br><br>
+  
+  <label for="lname">Question</label><br>
+  
+  <input type="text" id="question" name="question"><br><br>
+  
+
 <div class="forma">
-<p><strong>Tip:</strong> Use the resize property to prevent textareas from being resized (disable the "grabber" in the bottom right corner):</p>
+<p> code:</p>
 
 <form>
-  <textarea>Some text...</textarea>
+  <textarea placeholder="some text..."></textarea>
 </form>
 </div>
+<br>
+<input id="submit" type="submit" value="Submit">
+</form>
+
 <style>
 .forma{
   text-align: center;

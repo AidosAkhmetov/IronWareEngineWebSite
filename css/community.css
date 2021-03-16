@@ -14,6 +14,7 @@
   text-align: right;
 }
 .reklama{
+  border:1px;
   text-align: left;
 }
 .questions{
@@ -32,4 +33,15 @@
   content: "";
   clear: both;
   display: table;
+}
+
+
+.content {
+  padding: 20px;
+  min-height: 100%;
+  margin: 0 auto -50px;
+}
+.footer,
+.push {
+  height: 50px;
 }

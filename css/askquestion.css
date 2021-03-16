@@ -1,0 +1,13 @@
+.main{
+	text-align: center;
+}
+#title {
+  width: 30%;
+}
+#question {
+  width: 30%;
+}
+#submit{
+	margin-left: 650px;
+	text-align: center;
+}
