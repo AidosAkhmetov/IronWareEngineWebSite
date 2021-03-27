@@ -23,12 +23,11 @@ session_start();
   		<li><a href="#news">News</a></li>
   		<li><a href="documentation.php">Documentation</a></li>
   		<li><a href="community.php">Community</a></li>
-  		
   		<li class="dropdown" style="float:right">
     	
     	<a href="javascript:void(0)" class="dropbtn"><?php echo $user_data['user_name']; ?></a>
     	<div class="dropdown-content">
-      		<a href="#">Profile</a>
+      		<a href="profile.php">Profile</a>
       		<a href="#">Settings</a>
       		<a href="logout.php">Logout</a>
 

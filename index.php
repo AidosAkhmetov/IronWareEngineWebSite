@@ -27,13 +27,13 @@ session_start();
     	
     	<a href="javascript:void(0)" class="dropbtn"><?php echo $user_data['user_name']; ?></a>
     	<div class="dropdown-content">
-      		<a href="#">Profile</a>
+      		<a href="profile.php">Profile</a>
       		<a href="#">Settings</a>
       		<a href="logout.php">Logout</a>
 
     	</div>
   		</li>
-  		<li style="float: right"><a href="test.exe" download="test" id="download">Download</a></li>
+  		<li style="float: right"><a href="launcher.exe" download="launcher" id="download">Download</a></li>
   		
 	</ul>	
 
@@ -49,7 +49,7 @@ session_start();
  
 
 <script type="text/javascript">
-	var images = ['img/far.jpg','img/fifa.jpg'];
+	var images = ['img/fifa.jpg','img/fifa.jpg'];
     var x = 0;
 
     var imgs = document.getElementById('img');
@@ -73,7 +73,7 @@ session_start();
 <div class="slider">
 
     <div id="img">
-      <img src="img/fifa.jpg">
+      <img src="img/far.jpg">
     </div>
 
 </div>

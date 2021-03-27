@@ -28,7 +28,7 @@ session_start();
     	
     	<a href="javascript:void(0)" class="dropbtn"><?php echo $user_data['user_name']; ?></a>
     	<div class="dropdown-content">
-      		<a href="#">Profile</a>
+      		<a href="profile.php">Profile</a>
       		<a href="#">Settings</a>
       		<a href="logout.php">Logout</a>
 
@@ -37,7 +37,7 @@ session_start();
   		<li style="float: right"><a  id="download" href="#">Download</a></li>
   		
 	</ul>
-  <form action="insert_question.php" class="main">
+  <form action="community.php" class="main" method="post">
     <br>
   <label for="title">Title:</label><br>
 
@@ -46,23 +46,24 @@ session_start();
   <label for="lname">Question</label><br>
   
   <input type="text" id="question" name="question"><br><br>
+  <label> code:</label>
   
-
-<div class="forma">
-<p> code:</p>
-
-<form>
+    <br>
   <textarea placeholder="some text..."></textarea>
-</form>
-</div>
-<br>
-<input id="submit" type="submit" value="Submit">
-</form>
+  <br>
+  <input id="submit" type="submit" value="Submit">
+  
+  </form>
 
 <style>
-.forma{
-  text-align: center;
-} 
+#submit{
+  border-radius: 16px;
+    padding: 10px;
+    width: 70px;
+    color: white;
+    background-color: lightblue;
+    border: none;
+}
 textarea {
   width: 30%;
   height: 150px;

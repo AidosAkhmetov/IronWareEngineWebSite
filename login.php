@@ -16,7 +16,7 @@ session_start();
 		{
 
 			//read from database
-			$query = "select * from users where user_name = '$user_name' limit 1";
+			$query = "select * from user_data where user_name = '$user_name' limit 1";
 			$result = mysqli_query($con, $query);
 
 			if($result)
@@ -90,6 +90,7 @@ session_start();
 			<div style="font-size: 20px;margin: 10px;color: white;">Login</div>
 
 			<input id="text" type="text" name="user_name" placeholder="Name"><br><br>
+
 			<input id="text" type="password" name="password" placeholder="Password"><br><br>
 
 

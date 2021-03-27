@@ -9,14 +9,16 @@ session_start();
 	{
 		//something was posted
 		$user_name = $_POST['user_name'];
+		$last_name = $_POST['last_name'];
+		$email = $_POST['email'];
 		$password = $_POST['password'];
-
-		if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
+       
+		if(!empty($user_name) && !empty($password) && !is_numeric($user_name) && !empty($last_name) && !empty($email))
 		{
 
 			//save to database
 			$user_id = random_num(20);
-			$query = "insert into users (user_id,user_name,password) values ('$user_id','$user_name','$password')";
+			$query = "insert into user_data (user_id,user_name,last_name,email,password) values ('$user_id','$user_name','$last_name','$email','$password')";
 
 			mysqli_query($con, $query);
 
@@ -72,9 +74,10 @@ session_start();
 			<div style="font-size: 20px;margin: 10px;color: white;">Signup</div>
 
 			<input id="text" type="text" name="user_name" placeholder="Name"><br><br>
+			<input id="text" type="text" name="last_name" placeholder="Last name"><br><br>
+			<input id="text" type="text" name="email" placeholder="Email"><br><br>
 			<input id="text" type="password" name="password" placeholder="Password"><br><br>
-			<input id="text" type="password" name="password" placeholder="Confirm Password"><br><br>
-
+			
 			<input id="button" type="submit" value="Signup"><br><br>
 
 			<a href="login.php">Click to Login</a><br><br>
