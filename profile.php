@@ -34,9 +34,9 @@
 
 	<div class="container">
 		<form action="" method="post">
-			<button class="btn btn-default" style="float:right; width: 70px; background-color: white;" name="edit">
+			<a href="edit.php"style="float:right; width: 70px; background-color: white;" name="edit">
 			  Edit	
-			</button>
+			</a>
 	    </form>
 	    <div class="wrapper">
            <?php 
@@ -48,7 +48,7 @@
 	       		
 		        <div class="inputfield">
 		        <label for="fname">First name:</label>
-	       		<input  class="input" value="<?php
+	       		<input  class="input" disabled value="<?php
 	    	   	  echo $user_data['user_name']; 
 	       			?>">
 	       		</input><br>
@@ -56,15 +56,21 @@
 
 	       		<div class="inputfield">
 	       		<label  for="lname">Last name:</label>
-	       		<input  class="input" value="<?php echo $user_data['last_name']; ?>">
+	       		<input  class="input"  disabled value="<?php echo $user_data['last_name']; ?>">
 	       		</input><br><hr>
 	   			</div>
 
 	       		<div class="inputfield">
 	       		<label  for="email">Email:</label>
-	       		<input  class="input" value="<?php echo $user_data['email']; ?>">
+	       		<input  class="input" disabled value="<?php echo $user_data['email']; ?>">
 	       		</input><br><hr>
-	       		</div>  
+	       		</div>
+	       		<div class="inputfield">
+	       		<label for="ps">Password</label>
+	       		<input class="input" type="password" disabled value="<?php echo $user_data['password']?>">
+	       		<br><hr>
+	       		</div>
+	       		<a href="changeps.php">Change Password</a> 
 	    </div>
 	</div>
 
