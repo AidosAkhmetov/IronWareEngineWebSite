@@ -106,7 +106,7 @@ session_start();
 	<div id="box">
 		
 		<form onsubmit="return myfun()" method="post" class="main-form" >
-			<div style="font-size: 20px;margin: 10px;color: white;">Signup</div>
+			<div style="font-size: 30px;margin: 10px;color: black;"><b>Signup</b></div>
 			<div class="form">
 				<label for="username">Username</label> <br>
 				<input id="username" type="text" name="user_name"  placeholder="Name" autocomplete="off">

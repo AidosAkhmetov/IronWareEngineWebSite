@@ -43,6 +43,7 @@ session_start();
 <div class="clearfix">
   <div class="box">
   <b>ADVERTISING</b>
+  <a href="test2.php">Test</a>
   </div>
   
   <div class="box">

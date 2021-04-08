@@ -15,7 +15,6 @@
 <body>
 	<ul>
   		<li><a href="index.php">Home</a></li>
-  		<li><a href="#news">News</a></li>
   		<li><a href="documentation.php">Documentation</a></li>
   		<li><a href="community.php">Community</a></li>
   		<li class="dropdown" style="float:right">

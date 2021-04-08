@@ -17,25 +17,25 @@ session_start();
 </head>
 <body>
 
-	<ul>
-  		<li><a href="index.php">Home</a></li>
-  		<li><a href="#news">News</a></li>
-  		<li><a href="documentation.php">Documentation</a></li>
-  		<li><a href="community.php">Community</a></li>
-  		
-  		<li class="dropdown" style="float:right">
-    	
-    	<a href="javascript:void(0)" class="dropbtn"><?php echo $user_data['user_name']; ?></a>
-    	<div class="dropdown-content">
-      		<a href="profile.php">Profile</a>
-      		<a href="#">Settings</a>
-      		<a href="logout.php">Logout</a>
+  <ul>
+      <li><a href="index.php">Home</a></li>
+      <li><a href="documentation.php">Documentation</a></li>
+      <li><a href="community.php">Community</a></li>
+      <li class="dropdown" style="float:right">
+      
+      <a href="javascript:void(0)" class="dropbtn"><?php echo $user_data['user_name']; ?></a>
+      <div class="dropdown-content">
+          <a href="profile.php">Profile</a>
+          <a href="#">Settings</a>
+          <a href="logout.php">Logout</a>
 
-    	</div>
-  		</li>
-  		<li style="float: right"><a href="launcher.exe" download="launcher" id="download">Download</a></li>
-  		
-	</ul>	
+      </div>
+      </li>
+      <li style="float: right"><a href="download.php">Download</a></li>
+      
+  </ul> 
+
+ 
 
   <!---<div class="slider">
   		<li style="float: right"><a  id="download" href="#">Download</a></li

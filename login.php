@@ -55,10 +55,10 @@ session_start();
 
 	<style type="text/css">
 	*{
-		background: black;
+		background: white;
 	}
 	#text{
-		color:white;
+		color:black;
 		height: 25px;
 		border-radius: 5px;
 		padding: 4px;
@@ -87,12 +87,13 @@ session_start();
 	<div id="box">
 		
 		<form method="post">
-			<div style="font-size: 20px;margin: 10px;color: white;">Login</div>
-
-			<input id="text" type="text" name="user_name" placeholder="Name"><br><br>
-
-			<input id="text" type="password" name="password" placeholder="Password"><br><br>
-
+			<div style="font-size: 20px;margin: 10px;color: black;">Login</div>
+			<div class="form">
+				<input id="text" type="text" name="user_name" placeholder="Name"><br><br>
+			</div>
+			<div class="form">
+				<input id="text" type="password" name="password" placeholder="Password"><br><br>
+			</div>	
 
 			<input id="button" type="submit" value="Login"><br><br>
 

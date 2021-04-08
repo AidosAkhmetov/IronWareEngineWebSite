@@ -39,11 +39,6 @@ li a, .dropbtn {
 #download:hover{
   background-color: #593a3a;
 }
-/*li a:hover, .dropdown:hover .dropbtn {
-  background-color: white;
-  color:black;
-}*/
-
 li.dropdown {
   display: inline-block;
 }
@@ -79,15 +74,6 @@ li.dropdown {
 
 
 
-
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    line-height: 1.5;
-    font-family: 'Quicksand', sans-serif;
-}
 :root{
     --color:#ff282b;
 }
@@ -140,6 +126,7 @@ section{
     position: relative;
     z-index: 1;
 }
+
 @media (max-width:768px){
     .grid{
         grid-template-columns: 1fr;
