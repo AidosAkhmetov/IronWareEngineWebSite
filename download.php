@@ -39,6 +39,7 @@ session_start();
     
       <h4>Month</h4>
       <h5>$3.99</h5>
+      <br>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat commodi ad excepturi id expedita cupiditate repellendus possimus unde culpa! Eius.</p>
     </div>
 
@@ -46,6 +47,7 @@ session_start();
   
       <h4>3-Month</h4>
       <h5>$9.99</h5>
+      <br>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat commodi ad excepturi id expedita cupiditate repellendus possimus unde culpa! Eius.</p>
 
     </div>
@@ -54,6 +56,7 @@ session_start();
     
       <h4>Year</h4>
       <h5>$29.99</h5>
+      <br>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat commodi ad excepturi id expedita cupiditate repellendus possimus unde culpa! Eius.</p>
      
     </div>
@@ -62,7 +65,7 @@ session_start();
 
   <br>
   <div id="link">
-   <a id="downl" href="subscibe.php">Download</a>
+   <a id="downl" href="sub.php">Download</a>
   </div>
   <br>
 <style type="text/css">
@@ -105,20 +108,20 @@ li.dropdown {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: white;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
 .dropdown-content a {
-  color: black;
+  color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
   text-align: left;
 }
-.dropdown-content a:hover {background-color: #f1f1f1;}
+
 
 .dropdown:hover .dropdown-content {
   display: block;
@@ -136,7 +139,7 @@ li.dropdown {
 }
 .card{
   width: 250px;
-  height: 300px;
+  height: 250px;
   padding: 40px 30px;
   margin: 10px;
   border-radius: 1rem;
