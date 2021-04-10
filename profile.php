@@ -2,8 +2,10 @@
  session_start();
      include("connection.php");
      include("functions.php");
+     require_once('models/Transaction.php');
 
-	$user_data = check_login($con);
+	 $user_data = check_login($con);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -70,6 +72,13 @@
 	       		<input class="input" type="password" disabled value="<?php echo $user_data['password']?>">
 	       		<br><hr>
 	       		</div>
+				<div class="inputfield">
+	       		<label for="ps">transaction ID</label>
+	       		<input class="input" type="text" disabled value="">
+	       		<br><hr>
+	       		</div>
+	       		
+
 	       		<a href="changeps.php">Change Password</a> 
 	    </div>
 	</div>
