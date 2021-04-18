@@ -27,6 +27,7 @@ session_start();
         <div class="dropdown-content">
           <a href="profile.php">Profile</a>
           <a href="#">Settings</a>
+          <a href="transaction.php">Transaction</a>
           <a href="logout.php">Logout</a>
 
       </div>
@@ -41,6 +42,7 @@ session_start();
       <h5>$3.99</h5>
       <br>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat commodi ad excepturi id expedita cupiditate repellendus possimus unde culpa! Eius.</p>
+      <a  href="sub2.php" style="background-color: blue;color: white;">Download month</a>
     </div>
 
     <div class="card">
@@ -49,7 +51,7 @@ session_start();
       <h5>$9.99</h5>
       <br>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat commodi ad excepturi id expedita cupiditate repellendus possimus unde culpa! Eius.</p>
-
+      <a  href="sub.php" style="background-color: blue;color:white;">Download 3-month</a>
     </div>
     
     <div class="card">
@@ -58,16 +60,16 @@ session_start();
       <h5>$29.99</h5>
       <br>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat commodi ad excepturi id expedita cupiditate repellendus possimus unde culpa! Eius.</p>
-     
-    </div>
+      <a  href="sub3.php" style="background-color: blue;color:white;">Download year</a>
+      </div>
     
   </div>
 
   <br>
-  <div id="link">
+  <!---<div id="link">
    <a id="downl" href="sub.php">Download</a>
   </div>
-  <br>
+  <br>--->
 <style type="text/css">
 *{
   margin:0;
@@ -139,7 +141,7 @@ li.dropdown {
 }
 .card{
   width: 250px;
-  height: 250px;
+  height: 280px;
   padding: 40px 30px;
   margin: 10px;
   border-radius: 1rem;

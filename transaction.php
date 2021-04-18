@@ -1,3 +1,14 @@
+<?php
+  require_once('config/db.php');
+  require_once('lib/pdo_db.php');
+  require_once('models/Transaction.php');
+
+  // Instantiate Transaction
+  $transaction = new Transaction();
+
+  // Get Transaction
+  $transactions = $transaction->getTransactions();
+?>
 <?php 
 session_start();
 
@@ -14,12 +25,8 @@ session_start();
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="stripe/style.css">
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
- 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <title>Pay Page</title>
+  <title>View Transactions</title>
 </head>
 <body>
   <ul class="nav">
@@ -36,33 +43,40 @@ session_start();
       </div>
       </li>
   </ul>
-  <br>
-  <div class="container">
-    <h2 class="my-4 text-center">Three Month [$9.99]</h2>
-    <form action="charge.php" method="post" id="payment-form">
-      <div class="form-row">
-       <input type="text" name="first_name" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="First Name">
-       <input type="text" name="last_name" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Last Name">
-       <input type="email" name="email" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Email Address">
-        <div id="card-element" class="form-control">
-          <!-- a Stripe Element will be inserted here. -->
-        </div>
-        <!-- Used to display form errors -->
-        <div id="card-errors" role="alert"></div>
-      </div>
-      <button>Submit Payment</button>
-    </form>
+
+  <div class="container mt-4">
+    <div class="btn-group" role="group">
+      <!---<a href="transactions.php" class="btn btn-primary">Transactions</a>-->
+    </div>
+    <hr>
+    <h2>Transactions</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Transaction ID</th>
+          <th>Customer</th>
+          <th>Product</th>
+          <th>Amount</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php foreach($transactions as $t): ?>
+          <tr>
+            <td><?php echo $t->id; ?></td>
+            <td><?php echo $t->customer_id; ?></td>
+            <td><?php echo $t->product; ?></td>
+            <td><?php echo sprintf('%.2f', $t->amount / 100); ?> <?php echo strtoupper($t->currency); ?></td>
+            <td><?php echo $t->created_at; ?></td>
+          </tr>
+        <?php endforeach; ?>
+      </tbody>
+    </table>
+    <br>
+    <p><a href="sub.php">Pay Page</a></p>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://js.stripe.com/v3/"></script>
-  <script src="./js/charge.js"></script>
-  <style>
-    *{
-  margin:0;
-  padding: 0;
- 
-}
-  .nav{
+<style type="text/css">  
+.nav{
     font-size: 16px;
     font-weight: bold;
     border:1px solid #ccc;
@@ -113,8 +127,6 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
-  </style>
+</style>
 </body>
-
 </html>

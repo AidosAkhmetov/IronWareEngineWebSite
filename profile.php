@@ -26,6 +26,7 @@
     	<div class="dropdown-content">
       		<a href="profile.php">Profile</a>
       		<a href="#">Settings</a>
+      		<a href="transaction.php">Transaction</a>
       		<a href="logout.php">Logout</a>
 
     	</div>
