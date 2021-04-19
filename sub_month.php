@@ -39,7 +39,7 @@ session_start();
   <br>
   <div class="container">
     <h2 class="my-4 text-center">Month [$3.99]</h2>
-    <form action="charge.php" method="post" id="payment-form">
+    <form action="charge_month.php" method="post" id="payment-form">
       <div class="form-row">
        <input type="text" name="first_name" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="First Name">
        <input type="text" name="last_name" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Last Name">

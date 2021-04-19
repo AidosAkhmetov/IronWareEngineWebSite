@@ -1,3 +1,13 @@
+<?php
+  if(!empty($_GET['tid'] && !empty($_GET['product']))) {
+    $GET = filter_var_array($_GET, FILTER_SANITIZE_STRING);
+
+    $tid = $GET['tid'];
+    $product = $GET['product'];
+  } else {
+    header('Location: sub_month.php');
+  }
+?>
 <?php 
 session_start();
 
@@ -7,22 +17,17 @@ session_start();
   $user_data = check_login($con);
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="stripe/style.css">
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
- 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <title>Pay Page</title>
+  <title>Thank You</title>
 </head>
 <body>
-  <ul class="nav">
+      <ul class="nav">
       <li><a href="index.php">Home</a></li>
       <li><a href="documentation.php">Documentation</a></li>
       <li><a href="community.php">Community</a></li>
@@ -31,43 +36,29 @@ session_start();
         <div class="dropdown-content">
           <a href="profile.php">Profile</a>
           <a href="#">Settings</a>
+          <a href="transaction.php">Transaction</a>
           <a href="logout.php">Logout</a>
 
       </div>
       </li>
   </ul>
-  <br>
-  <div class="container">
-    <h2 class="my-4 text-center">Year [$19.99]</h2>
-    <form action="charge_year.php" method="post" id="payment-form">
-      <div class="form-row">
-       <input type="text" name="first_name" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="First Name">
-       <input type="text" name="last_name" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Last Name">
-       <input type="email" name="email" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Email Address">
-        <div id="card-element" class="form-control">
-          <!-- a Stripe Element will be inserted here. -->
-        </div>
-        <!-- Used to display form errors -->
-        <div id="card-errors" role="alert"></div>
-      </div>
-      <button >Submit Payment</button>
-    </form>
+  <div class="container mt-4">
+    <h2>Thank you for purchasing <?php echo $product; ?></h2>
+    <hr>
+    <p>Your transaction ID is <?php echo $tid; ?></p>
+    <p>Check your email for more info</p>
+    <p><a href="index.php" class="btn btn-light mt-2">Go Back</a></p>
   </div>
-  <script type="text/javascript">
-  
-  </script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://js.stripe.com/v3/"></script>
-  <script src="./js/charge.js"></script>
-  <style>
-    *{
+  <style type="text/css">
+      *{
   margin:0;
   padding: 0;
- 
+
 }
   .nav{
     font-size: 16px;
     font-weight: bold;
+
     list-style:none;
     margin:0;
     padding:0;
@@ -114,8 +105,6 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
-  </style>
+</style>
 </body>
-
 </html>

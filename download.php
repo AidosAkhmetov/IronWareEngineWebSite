@@ -42,7 +42,7 @@ session_start();
       <h5>$3.99</h5>
       <br>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat commodi ad excepturi id expedita cupiditate repellendus possimus unde culpa! Eius.</p>
-      <a  href="sub2.php" style="background-color: blue;color: white;">Download month</a>
+      <a  href="sub_month.php" style="background-color: blue;color: white;">Download month</a>
     </div>
 
     <div class="card">
@@ -60,7 +60,7 @@ session_start();
       <h5>$29.99</h5>
       <br>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat commodi ad excepturi id expedita cupiditate repellendus possimus unde culpa! Eius.</p>
-      <a  href="sub3.php" style="background-color: blue;color:white;">Download year</a>
+      <a  href="sub_year.php" style="background-color: blue;color:white;">Download year</a>
       </div>
     
   </div>
