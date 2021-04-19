@@ -38,7 +38,7 @@ session_start();
   </ul>
   <br>
   <div class="container">
-    <h2 class="my-4 text-center">Month [$3.99]</h2>
+    <h2 class="my-4 text-center">Year [$19.99]</h2>
     <form action="charge.php" method="post" id="payment-form">
       <div class="form-row">
        <input type="text" name="first_name" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="First Name">
@@ -50,9 +50,12 @@ session_start();
         <!-- Used to display form errors -->
         <div id="card-errors" role="alert"></div>
       </div>
-      <button>Submit Payment</button>
+      <button >Submit Payment</button>
     </form>
   </div>
+  <script type="text/javascript">
+  
+  </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://js.stripe.com/v3/"></script>
   <script src="./js/charge.js"></script>
@@ -65,8 +68,6 @@ session_start();
   .nav{
     font-size: 16px;
     font-weight: bold;
-    border:1px solid #ccc;
-    border-width:1px 0;
     list-style:none;
     margin:0;
     padding:0;

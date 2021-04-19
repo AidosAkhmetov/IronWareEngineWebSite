@@ -7,7 +7,7 @@
 		private $password   = "";
 		private $dbname = "ironware";
 		public $con;
-		public $customerTable = "itemss";
+		public $customerTable = "items";
 
 		public function __construct()
 		{
@@ -19,9 +19,9 @@
 		}
 
 		// Insert customer data into customer table
-		public function insertRecond($title, $body, $dob)
+		public function insertRecond($title, $body)
 		{
-			$sql = "INSERT INTO $this->customerTable (title, body, dob) VALUES('$title','$body','$dob')";
+			$sql = "INSERT INTO $this->customerTable (title, body) VALUES('$title','$body')";
 			$query = $this->con->query($sql);
 			if ($query) {
 				return true;

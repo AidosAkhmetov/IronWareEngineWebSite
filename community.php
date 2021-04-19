@@ -47,7 +47,7 @@ session_start();
     </div>
     <div class="col-lg-6">
       <button type="button" class="btn btn-primary m-1 float-right" data-toggle="modal" data-target="#addModal">
-      <i class="fa fa-plus"></i> Add New Record</button>
+      <i class="fa fa-plus"></i> Ask question</button>
   </div><br>
 </div>
 <div class="container">
@@ -66,21 +66,21 @@ session_start();
     <div class="modal-content">
       <!-- Modal Header -->
       <div class="modal-header">
-        <h4 class="modal-title">Add New Customer</h4>
+        <h4 class="modal-title">Ask a public question</h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
       <!-- Modal body -->
       <div class="modal-body">
         <form id="formData">
           <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" class="form-control" name="name" placeholder="Enter name" required="">
+            <label for="name">Title:</label>
+            <input type="text" class="form-control" name="title" placeholder=" " required="">
           </div>
           <div class="form-group">
-            <label for="email">Email address:</label>
-            <input type="email" class="form-control" name="email" placeholder="Enter email" required="">
+            <label for="email">Body:</label>
+            <input type="text" class="form-control" name="body" placeholder=" " required="">
           </div>
-          <div class="form-group">
+          <!---<div class="form-group">
             <label for="username">Username:</label>
             <input type="text" class="form-control" name="username" placeholder="Enter username" required="">
           </div>
@@ -88,7 +88,7 @@ session_start();
             <label for="date">Date of birth:</label>
             <input type="date" class="form-control" name="dob" placeholder="Enter dob" required="">
           </div>
-          <hr>
+          <hr>--->
           <div class="form-group float-right">
             <button type="submit" class="btn btn-success" id="submit">Submit</button>
             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -100,34 +100,33 @@ session_start();
 </div>
 
 <!-- Edit Record  Modal -->
+
 <div class="modal" id="editModal">
   <div class="modal-dialog">
     <div class="modal-content">
-      <!-- Modal Header -->
       <div class="modal-header">
         <h4 class="modal-title">Edit Customer</h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
-      <!-- Modal body -->
       <div class="modal-body">
         <form id="EditformData">
           <input type="hidden" name="id" id="edit-form-id">
           <div class="form-group">
-            <label for="name">Name:</label>
+            <label for="name">Title:</label>
             <input type="text" class="form-control" name="uname" id="name" placeholder="Enter name" required="">
           </div>
           <div class="form-group">
-            <label for="email">Email address:</label>
+            <label for="email">Body:</label>
             <input type="email" class="form-control" name="uemail" id="email" placeholder="Enter email" required="">
           </div>
-          <div class="form-group">
+          <!---<div class="form-group">
             <label for="username">Username:</label>
             <input type="text" class="form-control" name="uusername" id="username" placeholder="Enter username" required="">
           </div>
           <div class="form-group">
             <label for="date">Date of birth:</label>
             <input type="date" class="form-control" name="udob" id="dob" placeholder="Enter dob" required="">
-          </div>
+          </div>--->
           <hr>
           <div class="form-group float-right">
             <button type="submit" class="btn btn-primary" id="update">Update</button>
@@ -194,11 +193,9 @@ session_start();
         success:function(response){
           var data = JSON.parse(response);
           $("#edit-form-id").val(data.id);
-          $("#name").val(data.name);
-          $("#email").val(data.email);
-          $("#username").val(data.username);
-          $("#dob").val(data.dob);
-        }
+          $("#title").val(data.name);
+          $("#body").val(data.email);
+          }
       });
     });
   }); 
@@ -212,33 +209,33 @@ session_start();
   padding: 0;
 
 }
-.nava{
-  font-size: 16px;
-    font-weight: bold;
+  .nava{
+    font-size: 16px;
+      font-weight: bold;
 
-    list-style:none;
-    margin:0;
-    padding:0;
-    text-align:center;
-    background-color: black;
+      list-style:none;
+      margin:0;
+      padding:0;
+      text-align:center;
+      background-color: black;
 
-}
-.nava .li{
-    display:inline;
-}
-.nava a{
-    display:inline-block;
-    padding:20px;
-    text-decoration: none;
-    color:white;
-    background-color: black;
-}
-.nava a:hover{
-  background-color: #593a3a;
-}
-.li .dropdown {
-  display: inline-block;
-}
+  }
+  .nava .li{
+      display:inline;
+  }
+  .nava a{
+      display:inline-block;
+      padding:20px;
+      text-decoration: none;
+      color:white;
+      background-color: black;
+  }
+  .nava a:hover{
+    background-color: #593a3a;
+  }
+  .li .dropdown {
+    display: inline-block;
+  }
 
 .dropdown-content {
   display: none;

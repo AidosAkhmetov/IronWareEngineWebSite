@@ -80,8 +80,7 @@ session_start();
   .nav{
     font-size: 16px;
     font-weight: bold;
-    border:1px solid #ccc;
-    border-width:1px 0;
+
     list-style:none;
     margin:0;
     padding:0;

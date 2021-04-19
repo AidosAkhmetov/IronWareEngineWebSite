@@ -14,14 +14,20 @@ session_start();
 	<title>Main</title>
 	<!--<link rel="stylesheet" href="css/style.css ">-->
 	<script src="js/index.js"></script>
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.22/datatables.min.css"/>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
 </head>
 <body>
-<ul class="nav">
-  <li><a href="index.php">Home</a></li>
-  <li><a href="documentation.php">Documentation</a></li>
-  <li><a href="community.php">Community</a></li>
-  <li><a href="download.php">Download</a></li>
-  <li class="dropdown"><a href="javascript:void(0)" class="dropbtn"><?php echo $user_data['user_name']; ?></a>
+<ul class="nava">
+  <li class="li"><a href="index.php">Home</a></li>
+  <li class="li"><a href="documentation.php">Documentation</a></li>
+  <li class="li"><a href="community.php">Community</a></li>
+  <li class="li"><a href="download.php">Download</a></li>
+  <li  class="li" class="dropdown"><a href="javascript:void(0)" class="dropbtn"><?php echo $user_data['user_name']; ?></a>
     <div class="dropdown-content">
           <a href="profile.php">Profile</a>
           <a href="#">Settings</a>
@@ -37,7 +43,7 @@ session_start();
 
   <!---<div class="slider">
   		<li style="float: right"><a  id="download" href="#">Download</a></li
-  		<li style="float: right"><a href="test.exe" download="test" id="download">Download</a></li>
+  		<li style="float: right"><a href="launcher.exe" download="launcher" id="download">Download</a></li>
 	</ul>	
 -->
   
@@ -125,9 +131,10 @@ session_start();
   padding: 0;
 }
 
-.nav{
+.nava{
   font-size: 16px;
     font-weight: bold;
+
     list-style:none;
     margin:0;
     padding:0;
@@ -135,22 +142,23 @@ session_start();
     background-color: black;
 
 }
-.nav li{
+.nava .li{
     display:inline;
 }
-.nav a{
+.nava a{
     display:inline-block;
     padding:20px;
     text-decoration: none;
     color:white;
     background-color: black;
 }
-.nav a:hover{
+.nava a:hover{
   background-color: #593a3a;
 }
-li.dropdown {
+.li .dropdown {
   display: inline-block;
 }
+
 
 .dropdown-content {
   display: none;

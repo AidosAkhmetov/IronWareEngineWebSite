@@ -7,11 +7,9 @@
 	// Insert Record	
 	if (isset($_POST['action']) && $_POST['action'] == "insert") {
 
-		$name = $_POST['name'];
-		$email = $_POST['email'];
-		$username = $_POST['username'];
-		$dob = $_POST['dob'];
-		$dbObj->insertRecond($name, $email, $username, $dob);
+		$title = $_POST['title'];
+		$body = $_POST['body'];
+		$dbObj->insertRecond($title, $body);
 	}
 
 	// View record
@@ -25,21 +23,14 @@
 			        <thead>
 			          <tr>
 			            <th>Id</th>
-			            <th>Name</th>
-			            <th>Email</th>
-			            <th>Username</th>
-			            <th>Date of birth</th>
-			            <th>Action</th>
-			          </tr>
+			            <th>Title</th>
+			            </tr>
 			        </thead>
 			        <tbody>";
 			foreach ($customers as $customer) {
 			$output.="<tr>
 			            <td>".$customer['id']."</td>
-			            <td>".$customer['name']."</td>
-			            <td>".$customer['email']."</td>
-			            <td>".$customer['username']."</td>
-			            <td>".date('d-M-Y', strtotime($customer['dob']))."</td>
+			            <td>".$customer['title']."</td>
 			            <td>
 			              <a href='#editModal' style='color:green' data-toggle='modal' 
 			              class='editBtn' id='".$customer['id']."'><i class='fa fa-pencil'></i></a>&nbsp;
