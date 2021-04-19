@@ -29,20 +29,23 @@ session_start();
   <title>View Transactions</title>
 </head>
 <body>
-  <ul class="nav">
-      <li><a href="index.php">Home</a></li>
-      <li><a href="documentation.php">Documentation</a></li>
-      <li><a href="community.php">Community</a></li>
-      <li><a href="download.php">Download</a></li>
-      <li class="dropdown"><a href="javascript:void(0)" class="dropbtn"><?php echo $user_data['user_name']; ?></a>
-        <div class="dropdown-content">
+<ul class="nav">
+  <li><a href="index.php">Home</a></li>
+  <li><a href="documentation.php">Documentation</a></li>
+  <li><a href="community.php">Community</a></li>
+  <li><a href="download.php">Download</a></li>
+  <li class="dropdown"><a href="javascript:void(0)" class="dropbtn"><?php echo $user_data['user_name']; ?></a>
+    <div class="dropdown-content">
           <a href="profile.php">Profile</a>
           <a href="#">Settings</a>
+          <a href="transaction.php">Transaction</a>
           <a href="logout.php">Logout</a>
 
       </div>
       </li>
-  </ul>
+</ul>
+  
+
 
   <div class="container mt-4">
     <div class="btn-group" role="group">

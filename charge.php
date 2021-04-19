@@ -17,7 +17,7 @@ require_once('models/Transaction.php');
 ));
 
 $charge = \Stripe\Charge::create(array(
-  "amount" => 5000,
+  "amount" => 990,
   "currency" => "usd",
   "description" => "Ironware engine product",
   "customer" => $customer->id
