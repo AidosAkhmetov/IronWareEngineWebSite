@@ -2,6 +2,19 @@
   require_once('config/db.php');
   require_once('lib/pdo_db.php');
   require_once('models/Transaction.php');
+  $user = 'root';
+  $password = '';
+  $db = 'ironware';
+  $host = 'localhost';
+  
+  $link = mysqli_init();
+  $success = mysqli_real_connect(
+       $link,
+       $host,
+       $user,
+       $password,
+       $db
+  );
 
   // Instantiate Transaction
   $transaction = new Transaction();
@@ -71,6 +84,7 @@ session_start();
             <td><?php echo $t->product; ?></td>
             <td><?php echo sprintf('%.2f', $t->amount / 100); ?> <?php echo strtoupper($t->currency); ?></td>
             <td><?php echo $t->created_at; ?></td>
+            <td></td>
           </tr>
         <?php endforeach; ?>
       </tbody>

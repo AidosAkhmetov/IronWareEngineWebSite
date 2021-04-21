@@ -22,12 +22,12 @@ session_start();
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
 </head>
 <body>
-<ul class="nava">
-  <li class="li"><a href="index.php">Home</a></li>
-  <li class="li"><a href="documentation.php">Documentation</a></li>
-  <li class="li"><a href="community.php">Community</a></li>
-  <li class="li"><a href="download.php">Download</a></li>
-  <li  class="li" class="dropdown"><a href="javascript:void(0)" class="dropbtn"><?php echo $user_data['user_name']; ?></a>
+<ul class="nav">
+  <li><a href="index.php">Home</a></li>
+  <li><a href="documentation.php">Documentation</a></li>
+  <li><a href="community.php">Community</a></li>
+  <li><a href="download.php">Download</a></li>
+  <li  class="dropdown"><a href="javascript:void(0)" class="dropbtn"><?php echo $user_data['user_name']; ?></a>
     <div class="dropdown-content">
           <a href="profile.php">Profile</a>
           <a href="#">Settings</a>
@@ -123,7 +123,54 @@ session_start();
             </div>
         </div>
     </section>
+<footer class="bg-light text-center text-lg-start">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!--Grid row-->
+    <div class="row">
+      <!--Grid column-->
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+        <h5 class="text-uppercase"></h5>
 
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+          molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
+          voluptatem veniam, est atque cumque eum delectus sint!
+        </p>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Contact us</h5>
+
+        <ul class="list-unstyled mb-0">
+          <li>
+            <a href="#!" class="text-dark">email</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">phone</a>
+          </li>
+      
+        </ul>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+            <!--Grid column-->
+    </div>
+    <!--Grid row-->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright:
+    <a class="text-dark" href="#!">IronwareWebSite</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
 <style type="text/css">
   
 *{
@@ -131,7 +178,7 @@ session_start();
   padding: 0;
 }
 
-.nava{
+.nav{
   font-size: 16px;
     font-weight: bold;
 
@@ -142,20 +189,20 @@ session_start();
     background-color: black;
 
 }
-.nava .li{
+.nav li{
     display:inline;
 }
-.nava a{
+.nav a{
     display:inline-block;
     padding:20px;
     text-decoration: none;
     color:white;
     background-color: black;
 }
-.nava a:hover{
+.nav a:hover{
   background-color: #593a3a;
 }
-.li .dropdown {
+li .dropdown {
   display: inline-block;
 }
 
@@ -251,7 +298,6 @@ section{
       box-shadow: 5px 5px 10px #101010;
 
     }
-
     img {
       width: 100%;
       height: 100%;

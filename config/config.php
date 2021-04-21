@@ -7,7 +7,7 @@
 		private $password   = "";
 		private $dbname = "ironware";
 		public $con;
-		public $customerTable = "items";
+		public $customerTable = "itemss";
 
 		public function __construct()
 		{

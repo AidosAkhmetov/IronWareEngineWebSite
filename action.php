@@ -31,12 +31,7 @@
 			$output.="<tr>
 			            <td>".$customer['id']."</td>
 			            <td>".$customer['title']."</td>
-			            <td>
-			              <a href='#editModal' style='color:green' data-toggle='modal' 
-			              class='editBtn' id='".$customer['id']."'><i class='fa fa-pencil'></i></a>&nbsp;
-			              <a href='' style='color:red' class='deleteBtn' id='".$customer['id']."'>
-			              <i class='fa fa-trash' ></i></a>
-			            </td>
+			            
 			        </tr>";
 				}
 			$output .= "</tbody>

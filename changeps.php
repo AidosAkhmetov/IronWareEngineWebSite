@@ -34,9 +34,11 @@
 		$opwd=$_POST['opwd'];
 		$npwd=$_POST['npwd'];
 		$cpwd=$_POST['cpwd'];
-        
-        $sql=mysqli_query($con,"SELECT password FROM user_data where password='$opwd' && email='$email'");
+    
+    if ($npwd==$cpwd){    
+    $sql=mysqli_query($con,"SELECT password FROM user_data where password='$opwd' && email='$email'");
 		$num=mysqli_fetch_array($sql);
+    
 		if($num>0){
 		$con=mysqli_query($con,"update user_data set password='$npwd' where email='$email'");
 
@@ -46,9 +48,9 @@
 		$_SESSION['msg1']="Password does not match";
 	}
 	}
+}
 	?>
-	<a href="profile.php">bACK</a>
-    <p style="color:red;"><?php echo $_SESSION['msg1'];?></p>
+	  <p style="color:red;"><?php echo $_SESSION['msg1'];?></p>
     <!--<p style="color: white;"><?php echo $_SESSION['msg1'];?><?php $_SESSION['msg1'] =""; ?></p>--->
 	<form name="chngpwd" action="" method="post" onSubmit="return valid();">
 		<h3>Change Password</h3>

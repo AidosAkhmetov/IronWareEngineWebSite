@@ -1,3 +1,4 @@
+
 <div class="modal" id="editModal">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -10,11 +11,11 @@
           <input type="hidden" name="id" id="edit-form-id">
           <div class="form-group">
             <label for="name">Title:</label>
-            <input type="text" class="form-control" name="uname" id="name" placeholder="Enter name" required="">
+            <input type="text" class="form-control" name="uname" id="name" placeholder="" required="">
           </div>
           <div class="form-group">
             <label for="email">Body:</label>
-            <input type="email" class="form-control" name="uemail" id="email" placeholder="Enter email" required="">
+            <input type="text" class="form-control" name="uemail" id="email" placeholder="" required="">
           </div>
           <!---<div class="form-group">
             <label for="username">Username:</label>
@@ -34,6 +35,22 @@
     </div>
   </div>
 </div>
+
+<td>
+                    <a href='#editModal' style='color:green' data-toggle='modal' 
+                    class='editBtn' id='".$customer['id']."'><i class='fa fa-pencil'></i></a>&nbsp;
+                    <a href='' style='color:red' class='deleteBtn' id='".$customer['id']."'>
+                    <i class='fa fa-trash' ></i></a>
+                  </td>
+
+
+
+
+
+
+
+
+
 
 
 
