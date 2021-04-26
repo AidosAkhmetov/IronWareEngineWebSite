@@ -50,7 +50,7 @@ session_start();
         <!-- Used to display form errors -->
         <div id="card-errors" role="alert"></div>
       </div>
-      <button >Submit Payment</button>
+      <button>Submit Payment</button>
     </form>
   </div>
   <script type="text/javascript">

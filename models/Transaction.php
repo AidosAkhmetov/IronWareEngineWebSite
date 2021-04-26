@@ -25,7 +25,11 @@
         return false;
       }
     }
-
+    public function showTransactions(){
+      $this->db->query('SELECT * from transactions where customers.first_name = user_data.name;');
+      $results = $this->db->resultset();
+      return $results;
+    }
     public function getTransactions() {
       $this->db->query('SELECT * FROM transactions ORDER BY created_at DESC');
 

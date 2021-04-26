@@ -90,7 +90,7 @@ session_start();
       </tbody>
     </table>
     <br>
-    <p><a href="sub.php">Pay Page</a></p>
+    
   </div>
 <style type="text/css">  
 .nav{

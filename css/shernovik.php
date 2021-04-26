@@ -48,6 +48,38 @@
 
 
 
+<script type="text/javascript">
+  var images = ['img/fifa.jpg','img/fifa.jpg'];
+    var x = 0;
+
+    var imgs = document.getElementById('img');
+
+    setInterval(slider, 3000);
+
+
+    function slider() {
+
+      if (x < images.length) {
+        x = x + 1;
+      } else {
+        x = 1;
+      }
+
+
+      imgs.innerHTML = "<img src=" + images[x - 1] + ">";
+    }
+</script>
+
+<div class="slider">
+
+    <div id="img">
+      <img src="img/far.jpg">
+    </div>
+
+</div>
+
+
+
 
 
 

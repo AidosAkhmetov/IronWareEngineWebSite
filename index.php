@@ -24,14 +24,14 @@ session_start();
 <body>
 <ul class="nav">
   <li><a href="index.php">Home</a></li>
-  <li><a href="documentation.php">Documentation</a></li>
+  <li><a href="doc.php">Documentation</a></li>
   <li><a href="community.php">Community</a></li>
   <li><a href="download.php">Download</a></li>
   <li  class="dropdown"><a href="javascript:void(0)" class="dropbtn"><?php echo $user_data['user_name']; ?></a>
     <div class="dropdown-content">
           <a href="profile.php">Profile</a>
           <a href="#">Settings</a>
-          <a href="transaction.php">Transaction</a>
+          <a href="transaction. php">Transaction</a>
           <a href="logout.php">Logout</a>
 
       </div>
@@ -51,38 +51,6 @@ session_start();
 
 
  
-
-<script type="text/javascript">
-	var images = ['img/fifa.jpg','img/fifa.jpg'];
-    var x = 0;
-
-    var imgs = document.getElementById('img');
-
-    setInterval(slider, 3000);
-
-
-    function slider() {
-
-      if (x < images.length) {
-        x = x + 1;
-      } else {
-        x = 1;
-      }
-
-
-      imgs.innerHTML = "<img src=" + images[x - 1] + ">";
-    }
-</script>
-
-<div class="slider">
-
-    <div id="img">
-      <img src="img/far.jpg">
-    </div>
-
-</div>
-
-
 
 
 <section>
