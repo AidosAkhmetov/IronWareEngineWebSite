@@ -27,26 +27,29 @@ session_start();
   <title>Thank You</title>
 </head>
 <body>
-      <ul class="nav">
-      <li><a href="index.php">Home</a></li>
-      <li><a href="documentation.php">Documentation</a></li>
-      <li><a href="community.php">Community</a></li>
-      <li><a href="download.php">Download</a></li>
-      <li class="dropdown"><a href="javascript:void(0)" class="dropbtn"><?php echo $user_data['user_name']; ?></a>
-        <div class="dropdown-content">
+<ul class="nav">
+  <li><a href="index.php">Home</a></li>
+  <li><a href="doc.php">Documentation</a></li>
+  <li><a href="community.php">Community</a></li>
+  <li><a href="download.php">Download</a></li>
+  <li  class="dropdown"><a href="javascript:void(0)" class="dropbtn"><?php echo $user_data['user_name']; ?></a>
+    <div class="dropdown-content">
           <a href="profile.php">Profile</a>
           <a href="#">Settings</a>
-          <a href="transaction.php">Transaction</a>
+          <a href="transaction. php">Transaction</a>
           <a href="logout.php">Logout</a>
 
       </div>
       </li>
-  </ul>
+</ul>
   <div class="container mt-4">
     <h2>Thank you for purchasing <?php echo $product; ?></h2>
     <hr>
     <p>Your transaction ID is <?php echo $tid; ?></p>
     <p>Check your email for more info</p>
+    <a href="launcher.exe" download rel="noopener noreferrer" target="_blank">
+   Download
+</a>
     <p><a href="index.php" class="btn btn-light mt-2">Go Back</a></p>
   </div>
   <style type="text/css">
@@ -55,34 +58,34 @@ session_start();
   padding: 0;
 
 }
-  .nav{
-    font-size: 16px;
+.nav{
+  font-size: 16px;
     font-weight: bold;
 
     list-style:none;
     margin:0;
     padding:0;
     text-align:center;
-    overflow: hidden;
     background-color: black;
+
 }
 .nav li{
     display:inline;
-    background-color: black;
 }
-.nav a {
-    color:white;
+.nav a{
     display:inline-block;
     padding:20px;
     text-decoration: none;
+    color:white;
     background-color: black;
 }
 .nav a:hover{
   background-color: #593a3a;
 }
-li.dropdown {
+li .dropdown {
   display: inline-block;
 }
+
 
 .dropdown-content {
   display: none;

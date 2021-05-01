@@ -198,7 +198,7 @@ li .dropdown {
 }
 section{
     padding-left: 200px;
-    height: 80vh;
+    height: 94vh;
     display: flex;
     align-items: center;
     background: #101010;

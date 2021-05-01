@@ -23,7 +23,7 @@ session_start();
 
 <ul class="nav">
   <li><a href="index.php">Home</a></li>
-  <li><a href="documentation.php">Documentation</a></li>
+  <li><a href="doc.php">Documentation</a></li>
   <li><a href="community.php">Community</a></li>
   <li><a href="download.php">Download</a></li>
   <li class="dropdown"><a href="javascript:void(0)" class="dropbtn"><?php echo $user_data['user_name']; ?></a>
