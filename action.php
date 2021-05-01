@@ -22,14 +22,13 @@
 			$output .="<table class='table table-striped table-hover'>
 			        <thead>
 			          <tr>
-			            <th>Id</th>
+			         
 			            <th>Title</th>
 			            </tr>
 			        </thead>
 			        <tbody>";
 			foreach ($customers as $customer) {
 			$output.="<tr>
-			            <td>".$customer['id']."</td>
 			            <td>".$customer['title']."</td>
 			            
 			        </tr>";
