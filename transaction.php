@@ -66,7 +66,7 @@ session_start();
              -->
     </div>
     <hr>
-    <h2>Transactions</h2>
+    <h2>My Transactions</h2>
     <table class="table table-striped">
       <thead>
         <tr>

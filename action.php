@@ -29,9 +29,9 @@
 			        <tbody>";
 			foreach ($customers as $customer) {
 			$output.="<tr>
-			            <td>".$customer['title']."</td>
-			            
-			        </tr>";
+			            <td><a href='#editModal' style='color:green' data-toggle='modal' 
+			              class='editBtn' id='".$customer['id']."'>".$customer['title']."</a>&nbsp;</td>
+			            </tr>";
 				}
 			$output .= "</tbody>
       		</table>";

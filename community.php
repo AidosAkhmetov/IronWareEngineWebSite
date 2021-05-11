@@ -3,9 +3,8 @@ session_start();
 
   include("connection.php");
   include("functions.php");
-
+  include_once('config/config.php');
   $user_data = check_login($con);
-
 ?>
 
 <!DOCTYPE html>
@@ -100,7 +99,41 @@ session_start();
 </div>
 
 <!-- Edit Record  Modal -->
-
+<div class="modal" id="editModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Edit Customer</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="EditformData">
+          <input type="hidden" name="id" id="edit-form-id">
+          <div class="form-group">
+            <label for="name">Title:</label>
+            <input type="text" class="form-control" name="uname" id="name" placeholder="" required="">
+          </div>
+          <div class="form-group">
+            <label for="email">Body:</label>
+            <input type="text" class="form-control" name="uemail" id="email" placeholder="" required="">
+          </div>
+          <!---<div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" name="uusername" id="username" placeholder="Enter username" required="">
+          </div>
+          <div class="form-group">
+            <label for="date">Date of birth:</label>
+            <input type="date" class="form-control" name="udob" id="dob" placeholder="Enter dob" required="">
+          </div>--->
+          <hr>
+          <div class="form-group float-right">
+    
+          </div>  
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.22/datatables.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
