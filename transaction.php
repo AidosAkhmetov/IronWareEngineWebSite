@@ -44,10 +44,10 @@ session_start();
 <body>
 <ul class="nav">
   <li><a href="index.php">Home</a></li>
-  <li><a href="documentation.php">Documentation</a></li>
+  <li><a href="doc.php">Documentation</a></li>
   <li><a href="community.php">Community</a></li>
   <li><a href="download.php">Download</a></li>
-  <li class="dropdown"><a href="javascript:void(0)" class="dropbtn"><?php echo $user_data['user_name']; ?></a>
+  <li  class="dropdown"><a href="javascript:void(0)" class="dropbtn"><?php echo $user_data['user_name']; ?></a>
     <div class="dropdown-content">
           <a href="profile.php">Profile</a>
           <a href="#">Settings</a>
@@ -63,6 +63,8 @@ session_start();
   <div class="container mt-4">
     <div class="btn-group" role="group">
       <!---<a href="transactions.php" class="btn btn-primary">Transactions</a>    <td><?php echo $t->customer_id; ?></td>
+             
+
              -->
     </div>
     <hr>
@@ -74,6 +76,7 @@ session_start();
           <th>Product</th>
           <th>Amount</th>
           <th>Date</th>
+          <th>Download</th>
         </tr>
       </thead>
       <tbody>
@@ -83,7 +86,9 @@ session_start();
             <td><?php echo $t->product; ?></td>
             <td><?php echo sprintf('%.2f', $t->amount / 100); ?> <?php echo strtoupper($t->currency); ?></td>
             <td><?php echo $t->created_at; ?></td>
-            <td></td>
+            <td><a href="launcher.exe" download rel="noopener noreferrer" target="_blank">
+   Download Launcher
+</a></td>
           </tr>
         <?php endforeach; ?>
       </tbody>
@@ -92,33 +97,39 @@ session_start();
     
   </div>
 <style type="text/css">  
+   *{
+  margin:0;
+  padding: 0;
+
+}
 .nav{
-    font-size: 16px;
+  font-size: 16px;
     font-weight: bold;
+
     list-style:none;
     margin:0;
     padding:0;
     text-align:center;
-    overflow: hidden;
     background-color: black;
+
 }
 .nav li{
     display:inline;
-    background-color: black;
 }
-.nav a {
-    color:white;
+.nav a{
     display:inline-block;
     padding:20px;
     text-decoration: none;
+    color:white;
     background-color: black;
 }
 .nav a:hover{
   background-color: #593a3a;
 }
-li.dropdown {
+li .dropdown {
   display: inline-block;
 }
+
 
 .dropdown-content {
   display: none;

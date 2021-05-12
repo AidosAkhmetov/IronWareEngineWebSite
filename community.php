@@ -4,9 +4,19 @@ session_start();
   include("connection.php");
   include("functions.php");
   include_once('config/config.php');
-  $user_data = check_login($con);
-?>
+  $user_data = check_login($con);  
+  $dbObj = new Database();
+  if(isset($_POST['action']) && $_POST['action'] == "view") 
+  {
+    $output = "";
+    $customers = $dbObj->displayRecord();
+    echo $customers;
+  }
+  else{
+    echo "wrong";
+  }
 
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -103,7 +113,7 @@ session_start();
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Edit Customer</h4>
+        <h4 class="modal-title"></h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
       <div class="modal-body">
@@ -111,11 +121,11 @@ session_start();
           <input type="hidden" name="id" id="edit-form-id">
           <div class="form-group">
             <label for="name">Title:</label>
-            <input type="text" class="form-control" name="uname" id="name" placeholder="" required="">
+            <input type="text" class="form-control" disabled name="uname" id="name" placeholder="" required="" value="">
           </div>
           <div class="form-group">
             <label for="email">Body:</label>
-            <input type="text" class="form-control" name="uemail" id="email" placeholder="" required="">
+            <input type="text" class="form-control" disabled name="uemail" id="email" placeholder="" required="">
           </div>
           <!---<div class="form-group">
             <label for="username">Username:</label>
@@ -130,6 +140,13 @@ session_start();
     
           </div>  
         </form>
+        <form action="post_comment.php" method="POST">
+        <input type="hidden" name="namecom" value="<?php echo $user_data['user_name']; ?>">
+        <textarea name="comment" row="2"> 
+        
+        </textarea><br>
+        <input type="submit" value="Comment">
+      </form> 
       </div>
     </div>
   </div>

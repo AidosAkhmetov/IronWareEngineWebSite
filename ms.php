@@ -1,42 +1,53 @@
 <?php
-/* Attempt MySQL server connection. Assuming you are running MySQL
-server with default setting (user 'root' with no password) */
-$link = mysqli_connect("localhost", "root", "", "ironware");
- 
-// Check connection
-if($link === false){
-    die("ERROR: Could not connect. " . mysqli_connect_error());
-}
- 
-// Attempt select query execution
-$sql = "SELECT * FROM transactions";
-if($result = mysqli_query($link, $sql)){
-    if(mysqli_num_rows($result) > 0){
-        echo "<table>";
-            echo "<tr>";
-                echo "<th>id</th>";
-                echo "<th>first_name</th>";
-                echo "<th>last_name</th>";
-                echo "<th>email</th>";
-            echo "</tr>";
-        while($row = mysqli_fetch_array($result)){
-            echo "<tr>";
-                echo "<td>" . $row['product'] . "</td>";
-                echo "<td>" . $row['amount'] . "</td>";
-                echo "<td>" . $row['currency'] . "</td>";
-                echo "<td>" . $row['status'] . "</td>";
-            echo "</tr>";
-        }
-        echo "</table>";
-        // Free result set
-        mysqli_free_result($result);
-    } else{
-        echo "No records matching your query were found.";
-    }
-} else{
-    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-}
- 
-// Close connection
-mysqli_close($link);
+	// Include config.php file
+	include_once('config/config.php');
+
+	$dbObj = new Database();
+	$count=0;
+	// Insert Record	
+	if (isset($_POST['action']) && $_POST['action'] == "insert") {
+
+		$title = $_POST['title'];
+		$body = $_POST['body'];
+		$dbObj->insertRecond($title, $body);
+	}
+
+	// View record
+	if (isset($_POST['action']) && $_POST['action'] == "view") {
+		$output = "";
+
+		$customers = $dbObj->displayRecord();
+
+		if ($dbObj->totalRowCount() > 0) {
+			$output .="<table class='table table-striped table-hover'>
+			        <thead>
+			          <tr>
+			         
+			            <th>Title</th>
+			            <th></th>
+			            </tr>
+			        </thead>
+			        <tbody>";
+			foreach ($customers as $customer) {
+			$output.="<tr>
+			            <td><a href='#editModal' style='text-decoration: none;' data-toggle='modal' 
+			              class='editBtn' id='".$customer['id']."'>".$customer['title']."</a>&nbsp;</td>
+			            <td>$count answer</td>
+			            </tr>";
+				}
+			$output .= "</tbody>
+      		</table>";
+      		echo $output;	
+		}else{
+			echo '<h3 class="text-center mt-5">No records found</h3>';
+		}
+	}
+
+	// Edit Record	
+	if (isset($_POST['editId'])) {
+		$editId = $_POST['editId'];
+		$row = $dbObj->getRecordById($editId);
+		echo json_encode($row);
+	}
+
 ?>

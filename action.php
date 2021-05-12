@@ -3,7 +3,7 @@
 	include_once('config/config.php');
 
 	$dbObj = new Database();
-
+	$count=0;
 	// Insert Record	
 	if (isset($_POST['action']) && $_POST['action'] == "insert") {
 
@@ -24,13 +24,15 @@
 			          <tr>
 			         
 			            <th>Title</th>
+			            <th></th>
 			            </tr>
 			        </thead>
 			        <tbody>";
 			foreach ($customers as $customer) {
 			$output.="<tr>
-			            <td><a href='#editModal' style='color:green' data-toggle='modal' 
+			            <td><a href='#editModal' style='text-decoration: none;' data-toggle='modal' 
 			              class='editBtn' id='".$customer['id']."'>".$customer['title']."</a>&nbsp;</td>
+			            <td>$count answer</td>
 			            </tr>";
 				}
 			$output .= "</tbody>

@@ -11,37 +11,19 @@ session_start();
   <title>IronWareEngine Documentation</title>
 </head>
 
-<body>
-  <ul class="nav">
-  <li><a href="index.php">Home</a></li>
-  <li><a href="doc.php">Documentation</a></li>
-  <li><a href="community.php">Community</a></li>
-  <li><a href="download.php">Download</a></li>
-  <li  class="dropdown"><a href="javascript:void(0)" class="dropbtn"><?php echo $user_data['user_name']; ?></a>
-    <div class="dropdown-content">
-          <a href="profile.php">Profile</a>
-          <a href="#">Settings</a>
-          <a href="transaction. php">Transaction</a>
-          <a href="logout.php">Logout</a>
 
-      </div>
-      </li>
-</ul>
 
   
 
   <nav id="navbar">
   <!-- Navigation Bar -->
-    <br>
-  <br>
-  <br>
-  <br>
+
     <header>IronWareEngine Documentation</header>
     <ul>
 
-      <a class="nav-link" href="#Introduction" rel="internal"><li>Introduction</li></a>
-      <a class="nav-link" href="#Responsive_Web_Design" rel="internal"><li>Responsive Web Design</li></a>
-      <a class="nav-link" href="#Basic_HTML_and_HTML5" rel="internal"><li>Basic HTML and HTML5</li></a>
+      <!--<a class="nav-link" href="#Introduction" rel="internal"><li>Introduction</li></a>
+      <a class="nav-link" href="#Responsive_Web_Design" rel="internal"><li>Responsive Web Design</li></a>-->
+      <a class="nav-link" href="#Basic_HTML_and_HTML5" rel="internal"><li>Get started</li></a>
       <a class="nav-link" href="#Basic_CSS" rel="internal"><li>Code</li></a>
       <!--
       <a class="nav-link" href="#Applied_Visual_Design" rel="internal"><li>Applied Visual Design</li></a>
@@ -54,7 +36,8 @@ session_start();
   </nav>
   
   <main id="main-doc"> <!-- Main Document Div Container -->
-    <section class="main-section" id="Introduction"> <!-- Introduction Container -->
+    <!--
+    <section class="main-section" id="Introduction">
       <header><u>Introduction</u></header> 
       <article>
         <p>freeCodeCamp is a nonprofit, open sourced organization that acts as an interactive learning platform to teach anyone how to code multiple programming languages. fCC also comprises of an online community forum and chat rooms to further support their friendly learning environment. The lessons start out with tutorials and instructional programming and advance to personal projects and have the students be a part of other nonprofits to build web applications. With all of these tools and resources available the students gain practical developer experience and knowledge.</p>
@@ -73,7 +56,7 @@ session_start();
       </article>
     </section>
     <br>
-    <section class="main-section" id="Responsive_Web_Design"> <!-- Responsive Web Design Container -->
+    <section class="main-section" id="Responsive_Web_Design">
       <header><u>Responsive Web Design</u></header>
       <article>
         <p>Responsive web design suggests that the approach of designing and developing a website should repond to the user's behavior and enviornment based on platform, orientation and screen size. The practice consists of a well organized HTML structure and a mix of flexible grids, customizable layouts and images of intelligent use of CSS and it's media queries. For example, as a user switches from a laptop to a tablet or phone, the website will automatically switch media to accommodate for resolution, image size and scripting abiliities. To put simply, the website will have the technology to automatically respond to the user's preferences and different devices. This eliminates the need for multiple different design and development phases for each new gadget that is new to the market.<a name="3_back_to_top"></a><a class="super" href="#3" rel="internal"><sup>[3]</sup></a></p>
@@ -85,7 +68,7 @@ session_start();
       </article>
     </section>
     <br>
-    <section class="main-section" id="Basic_HTML_and_HTML5"> <!-- Basic HTML and HTML5 Container -->
+    <section class="main-section" id="Basic_HTML_and_HTML5">
       <header><u>Basic HTML and HTML5</u></header>
       <article>
         <p>Hyper Text Markup Language, or better known as HTML, is a markup language to describe the structure of a web page much like a skeleton of a human body. An array of unique syntax of elements are used to organize and give information about the content to the web browser. Opening and closing tags are used on elements that surround content and gives meaning to it. There are different element tags that have different functions and uses that could include paragraphs, headers, links or lists.<a name="4_back_to_top"></a><a class="super" href="#4" rel="internal"><sup>[4]</sup></a></p>
@@ -290,10 +273,11 @@ multiple line comment --&gt;
         </code>
       </article>
     </section>
-    <section class="main-section" id="Basic_CSS"> <!-- Basic CSS Container -->
+     <!-- Basic CSS Container -->
+    <section class="main-section" id="Basic_CSS">
       <header><u>Code Part</u></header>
       <article>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat commodi ad excepturi id expedita cupiditate repellendus possimus unde culpa! Eius.<a name="26_back_to_top"></a><a class="super" href="#26" rel="internal"><sup>[26]</sup></a></p>
+        <p>Lorem ipsum dolor sit amet, codsectetur adipisicing elit. Repellat commodi ad excepturi id expedita cupiditate repellendus possimus unde culpa! Eius.<a name="26_back_to_top"></a><a class="super" href="#26" rel="internal"><sup>[26]</sup></a></p>
         <p></p>
         <li style="list-style: none;"><a class="css" href="#styling" rel="internal">Class Drawable</a> | <a class="css" href="#import" rel="internal">Import</a> | <a class="css" href="#units" rel="internal">Units</a> | <a class="css" href="#csscomments" rel="internal">Comments</a> | <a class="css" href="#colors" rel="internal">Colors</a> |<a class="css" href="#fonts" rel="internal">Fonts</a> | <a class="css" href="#images" rel="internal">Images</a> | <a class="css" href="#borders" rel="internal">Borders</a> | <a class="css" href="#background" rel="internal">Background</a> | <a class="css" href="#padding" rel="internal">Padding</a> | <a class="css" href="#margin" rel="internal">Margin</a></li>
         <br>
@@ -319,285 +303,11 @@ private:
 };         
         </code>
         <br>
-        <h2 id="import">Import</h2>
-        <p>Using import in CSS is very similar to using the &lt;link&gt; element in HTML. One of the basic uses of it, just like the &lt;link&gt; element, is to import a font family more than likely from Google. Shown below is an example of importing the Google font Open Sans.<a name="32_back_to_top"></a><a class="super" href="#32" rel="internal"><sup>[32]</sup></a></p>
-        <code>
-&lt;style&gt;
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-&lt;/style&gt;          
-        </code>
-        <br>
-        <h2 id="units">Units</h2>
-        <p>There are two main types of units that measure length, absolute and relative. Pixels are a type of relative length unit, mostly used for screen resolutions and sizing, that tells the browser how to size or space an object. This is the most widely used unit, but there are more units that can be used. Em or rem are more relative length units that are relative to another length. Ems are based on the size of an element's font. Absolute units are tied to a physical unit of length such as inches (in) and millimeters (mm).<a name="33_back_to_top"></a><a class="super" href="#33" rel="internal"><sup>[33]</sup></a></p>
-        <code>
-&lt;style&gt;
-  html {
-    color: black;
-    width: 1000px;  /* Pixels */
-    length: 10in; /* Inches */
-    font-size: 2em; /* Ems */      
-    line-height: 1rem; /* Rems */      
-}
-&lt;/style&gt;          
-        </code>
-        <br>
-        <h2 id="csscomments">Comments</h2>
-        <p>Like in HTML, comments are a way to leave notes and reminders about the code for yourself or another programmer so they understand quickly what they are reading. They are also used to prevent the browser from interpreting parts of the style sheet. Comments start with an opening tag of /* and close with a */ when finished.<a name="34_back_to_top"></a><a class="super" href="#34" rel="internal"><sup>[34]</sup></a></p>
-        <code>
-&lt;style&gt;          
-/* This is a single line comment */
-          
-/* This is a
-multiple line comment */
-&lt;/style&gt;          
-        </code>
-        <br>
-        <h2 id="colors">Colors</h2>
-        <p>The color of text, backgrounds, objects, borders, you name it can be colored with CSS. The main colors, such as red, blue, green, etc can be declared by simply inputing those in your CSS code. Another method for declaring a color is using the colors hexadecimal code, or hex number. Hex code gives the user a huge range of colors to use and is done by using the hash symbol (#) followed by six numbers and letters. An abbriviated version can also be used by the hash symbol followed by only three numbers and letters, however, this will yield a smaller group of colors. Another way to represent colors in CSS is by using RGB values. RGB uses three numbers from 0 to 255 that measures and mixes the three primary colors to make all of the colors. There is a lot that can be covered and said about colors using CSS so additional references are posted to further explore this vast topic.<a name="35_back_to_top"></a><a class="super" href="#35" rel="internal"><sup>[35]</sup></a><a name="36_back_to_top"></a><a class="super" href="#36" rel="internal"><sup>[36]</sup></a><a name="37_back_to_top"></a><a class="super" href="#37" rel="internal"><sup>[37]</sup></a><a name="38_back_to_top"></a><a class="super" href="#38" rel="internal"><sup>[38]</sup></a><a name="39_back_to_top"></a><a class="super" href="#39" rel="internal"><sup>[39]</sup></a><a name="40_back_to_top"></a><a class="super" href="#40" rel="internal"><sup>[40]</sup></a></p>
-        <code>
-/* Main Color Callouts */
-h1 {
-  color: red;        
-}
-.title-background {
-  color: black;        
-}  
-#special-font {
-  color: blue;       
-}  
-          
- 
-/* Hex Codes */
-h1 {
-  color: #ff0000;        
-}
-.title-background {
-  color: #000000;        
-}  
-#special-font {
-  color: #0000ff;       
-}  
-          
-          
-/* Abbreviated Hex Codes */
-h1 {
-  color: #f00;        
-}
-.title-background {
-  color: #000;        
-}  
-#special-font {
-  color: #00f;       
-}  
-          
-          
-/* RGB Values */
-h1 {
-  color: rgb(255,0,0);        
-}
-.title-background {
-  color: rgb(0,0,0);        
-}  
-#special-font {
-  color: rgb(0,0,255);       
-}            
-        </code>
-        <br>
-        <h2 id="fonts">Fonts</h2>
-        <p>There are many desired characteristics we want to see from the fonts of a webpage, CSS makes it possible to achieve these. The family, style, size, color, and weight can all be modified for desired looks and effects. Below are many examples how to change fonts in CSS.<a name="41_back_to_top"></a><a class="super" href="#41" rel="internal"><sup>[41]</sup></a><a name="42_back_to_top"></a><a class="super" href="#42" rel="internal"><sup>[42]</sup></a><a name="43_back_to_top"></a><a class="super" href="#43" rel="internal"><sup>[43]</sup></a><a name="44_back_to_top"></a><a class="super" href="#44" rel="internal"><sup>[44]</sup></a><a name="45_back_to_top"></a><a class="super" href="#45" rel="internal"><sup>[45]</sup></a></p>
-        <code>
-/* Font Styles */
-body {
-  font-style: normal; /* The browser displays a normal font style, this is default */        
-}
-.font-style-1 {
-  font-style: italic; /* The browser displays an italic font style */
-}
-#special-font {
-  font-style: oblique; /* The browser displays an oblique font style */       
-}  
-          
-          
-/* Font Weights */
-html {
-  font-weight: normal; /* Defines normal characters, this is default */        
-}          
-.bold-font {
-  font-weight: bold; /* Defines thick characters */        
-}   
-#bolder-font {
-  font-weight: bolder; /* Defines thicker characters */        
-}   
-p {
-  font-weight: lighter; /* Defines lighter characters */       
-}   
-.thickness-selector {
-  font-weight: 100; /* 100 - 900 for custom thickness. 400 is the same as normal, 700 the same as bold */        
-}          
-          
-          
-/* Font Sizes */
-h1 {
-  font-size: 16px; /* Defines normal character size using pixels */        
-} 
-.em-size {
-  font-size: 2em; /* Defines font size in ems */        
-}          
-          
-          
-/* Font Families */
-h2 {
-  font-family: Sans-Serif; /* Defines the Sans-Serif font family */        
-}          
-.font-degrade {
-  font-family: Monospace, Sans-Serif; /* Defines what font to degrade to if the browser or local machine doesn't have the former in the library */   
-}          
-
-          
-/* Font In One Declaration */
-body {
-  font: italic bold 12px arial; /* (font-style font-weight font-size font-family) All four properties can be declared on one line of code */        
-}                   
-        </code>
-        <br>
-        <h2 id="images">Images</h2>
-        <p>CSS has properties called width and height that controls an elements width and height. Just like with fonts, pixels are used to control these aspects of the element. Below is an example of resizing an image.<a name="46_back_to_top"></a><a class="super" href="#46" rel="internal"><sup>[46]</sup></a></p>
-        <code>
-&lt;style&gt;          
-  img {
-    width: 500px;
-    height: 500px;
-    max-width: 100%;
-    max-height: auto;      
-}
-&lt;/style&gt;          
-        </code>
-        <br>
-        <h2 id="borders">Borders</h2>
-        <p>Borders can be placed around elements to give it a more define presence or to keep objects orderly on the webpage. They come in many styles, shapes and sizes. Below are a few examples of using borders in CSS.<a name="47_back_to_top"></a><a class="super" href="#47" rel="internal"><sup>[47]</sup></a><a name="48_back_to_top"></a><a class="super" href="#48" rel="internal"><sup>[48]</sup></a><a name="49_back_to_top"></a><a class="super" href="#49" rel="internal"><sup>[49]</sup></a></p>
-        <code>
-&lt;style&gt;          
-.border-example {
-  border-color: black; /* Defines the color of the border */ 
-  border-width: 7px; /* Defines the width of the border, in pixels */
-  border-style: solid; /* Defines the style of the border */  
-  border-radius: 10px; /* Defines how round the corners of the border are */
-  border-radius: 50%; /* When used as a percentage, border-radius creates a circular border around the element */        
-}
-          
-      
-.border-example-2 {
-  border: 5px dotted yellow; /* Border properties can be written on one like like shown */        
-}          
-&lt;/style&gt;          
-        </code>
-        <br>
-        <h2 id="background">Background</h2>
-        <p>An elements background characteristic can be set up using the background property. Much like with other elements, a backgrounds color, position, display and image overlay can be modified. Examples are shown below on CSS backgrounds.<a name="50_back_to_top"></a><a class="super" href="#50" rel="internal"><sup>[50]</sup></a><a name="51_back_to_top"></a><a class="super" href="#51" rel="internal"><sup>[51]</sup></a></p>
-        <code>
-&lt;style&gt;
-  .background-1 {
-    background-color: white; /* Specifies the background color */
-    background-image: url("https://www.image-url-here.com"); /* Specifies the url for the background image overlay */
-    background-repeat: no-repeat; /* Specifies how and if the background repeats */
-    background-position: right top; /* Specifies the position of the background on the screen */    
-}        
-  .background-2 {
-    background: red url("https://www.image-url-here.com") repeat-x bottom left; /* Like with many elements, all of the properties can be written on one line */     
-}        
-        </code>
-        <br>
-        <h2 id="padding">Padding</h2>
-        <p>An element's padding controls the amount of space between the element's content and its border. When you increase padding, it increases the distance between the text, padding, and border around it. Sometimes you will want to customize an element so that it has different padding on each of its sides. Padding-top, padding-right, padding-bottom, and padding-left each control the padding on the different four sides of the element. The short hand of applying different padding to the sides is using clockwise notation using just the padding attribute.<a name="52_back_to_top"></a><a class="super" href="#52" rel="internal"><sup>[52]</sup></a><a name="53_back_to_top"></a><a class="super" href="#53" rel="internal"><sup>[53]</sup></a><a name="54_back_to_top"></a><a class="super" href="#54" rel="internal"><sup>[54]</sup></a></p>
-        <code>
-/* Normal padding */          
-.box1 {
-  padding: 15px;        
-}          
-          
-          
-/* Specific padding */
-.box2 {
-   padding-top: 15px;
-   padding-right: 7px;
-   padding-bottom: 3px;
-   padding-left: 20px;       
-}
-          
-          
-/* Shorthand clockwise notation */
-.box3 {
-   padding: 15px 7px 3px 20px;       
-}          
-        </code>
-        <br>
-        <h2 id="margin">Margin</h2>
-        <p>An element's margin controls the amount of space between an element's border and surrounding elements. When you increase an elements margin, it will increase the distance that distance. Just like with padding, you can control the top, right, bottom, and left margins separately. Clockwise shorthand notation can also be used with margins.<a name="55_back_to_top"></a><a class="super" href="#55" rel="internal"><sup>[55]</sup></a><a name="56_back_to_top"></a><a class="super" href="#56" rel="internal"><sup>[56]</sup></a><a name="57_back_to_top"></a><a class="super" href="#57" rel="internal"><sup>[57]</sup></a></p>
-        <code>
-/* Normal margin */          
-.box1 {
-  margin: 15px;        
-}          
-          
-          
-/* Specific margin */
-.box2 {
-   margin-top: 15px;
-   margin-right: 7px;
-   margin-bottom: 3px;
-   margin-left: 20px;       
-}
-          
-          
-/* Shorthand clockwise notation */
-.box3 {
-   margin: 15px 7px 3px 20px;       
-}          
-        </code>
-        <br>
-      </article>
-    </section>
-    <!--
-    <section class="main-section" id="Applied_Visual_Design">
-      <header><u>Applied Visual Design</u></header>
-      <article>
-        <p></p>
-        <p></p>
-        <li></li>
-        <code></code>
-      </article>
-    </section>
-    <section class="main-section" id="Applied_Accessibility">
-      <header><u>Applied Accessibility</u></header>
-      <article>
-        <p></p>
-        <p></p>
-        <li></li>
-        <code></code>
-      </article>
-    </section>
-    <section class="main-section" id="Responsive_Web_Design_Principles">
-      <header><u>Responsive Web Design Principles</u></header>
-      <article>
-        <p></p>
-        <p></p>
-        <li></li>
-        <code></code>
-      </article>
-    </section>
-    <section class="main-section" id="CSS_Flexbox">
-      <header><u>CSS Flexbox</u></header>
-      <article>
-        <p></p>
-        <p></p>
-        <li></li>
-        <code></code>
-      </article>
-    </section>
-    -->
-    <section class="main-section" id="References"> <!-- Reference Container -->
+    
+    <section class="main-section" id="References">
       <header><u>References</u></header>
       <article>
+           <!--
         <ol>
           <li><a href="#1_back_to_top" style="text-decoration: none;">^</a> <a name="1"></a><a class="source" href="https://en.wikipedia.org/wiki/FreeCodeCamp#cite_ref-1" target="_blank">freeCodeCamp's Wikipedia article</a> - Retrieved 2017-03-16</li>
           <li><a href="#2_back_to_top" style="text-decoration: none;">^</a> <a name="2"></a><a class="source" href="https://www.freecodecamp.com/about/" target="_blank">freeCodeCamp's about page</a> - Retrieved 2017-03-16</li>
@@ -661,6 +371,7 @@ body {
           <!--
           <li><a href="#49_back_to_top" style="text-decoration: none;">^</a> <a name="49"></a><a class="source" href="#" target="_blank">#</a> - Retrieved 2017-04-07</li>
           -->
+
         </ol>
       </article>
     </section>
@@ -723,8 +434,8 @@ li.dropdown {
 
 html, body {
   font-family: 'Lato', Arial, sans-serif;
-  background-color: rgb(0,100,0);
-  color: white;
+  background-color: white;
+  color: black;
   line-height: 1.3;
 }
 #navbar {
@@ -749,7 +460,7 @@ header {
   cursor: pointer;
 }
 #navbar li {
-  color: white;
+  color: black;
   border: 1px solid;
   padding: 7px;
   list-style: none;

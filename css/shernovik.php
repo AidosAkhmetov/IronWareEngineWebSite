@@ -82,7 +82,27 @@
 
 
 
-
+$sql = "select * from transaction";
+  if($result = mysqli_query($con, $sql))
+  {
+    if(mysqli_num_rows($result) > 0){
+       echo "<table>";
+            echo "<tr>";
+                echo "<th>id</th>";
+                echo "<th>first_name</th>";
+                echo "<th>last_name</th>";
+                echo "<th>email</th>";
+            echo "</tr>";
+        while($row = mysqli_fetch_array($result)){
+            echo "<tr>";
+                echo "<td>" . $row['product'] . "</td>";
+                echo "<td>" . $row['amount'] . "</td>";
+                echo "<td>" . $row['currency'] . "</td>";
+                echo "<td>" . $row['status'] . "</td>";
+            echo "</tr>";
+}
+    }
+?>
 
 
 
