@@ -5,9 +5,7 @@
 
 	$user_data = check_login($con);
 
-  else{
-    $update = "update user_data set user_name="""
-  }
+ 
 ?>
 <!DOCTYPE html>
 <html>

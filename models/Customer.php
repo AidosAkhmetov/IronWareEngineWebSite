@@ -25,7 +25,7 @@
     }
 
     public function getCustomers() {
-      $this->db->query('SELECT * FROM customers ORDER BY created_at DESC');
+      $this->db->pg_query('SELECT * FROM customers ORDER BY created_at DESC');
 
       $results = $this->db->resultset();
 

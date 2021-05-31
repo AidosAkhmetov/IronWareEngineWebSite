@@ -32,7 +32,6 @@
 			$output.="<tr>
 			            <td><a href='#editModal' style='text-decoration: none;' data-toggle='modal' 
 			              class='editBtn' id='".$customer['id']."'>".$customer['title']."</a>&nbsp;</td>
-			            <td>$count answer</td>
 			            </tr>";
 				}
 			$output .= "</tbody>

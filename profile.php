@@ -57,7 +57,12 @@
 	       		<input  class="input"  disabled value="<?php echo $user_data['last_name']; ?>">
 	       		</input><br><hr>
 	   			</div>
-
+            <div class="inputfield">
+            <label  for="age">Age:</label>
+            <input  class="input" disabled value="<?php echo $user_data['age']; ?>">
+            </input><br><hr>
+            </div>
+            
 	       		<div class="inputfield">
 	       		<label  for="email">Email:</label>
 	       		<input  class="input" disabled value="<?php echo $user_data['email']; ?>">

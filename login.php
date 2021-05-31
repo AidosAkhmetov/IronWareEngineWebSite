@@ -16,15 +16,15 @@ session_start();
 		{
 
 			//read from database
-			$query = "select * from user_data where user_name = '$user_name' limit 1";
-			$result = mysqli_query($con, $query);
+			$query = "select * from customers where customers = '$user_name'";
+			$result = pg_query($con, $query);
 
 			if($result)
 			{
-				if($result && mysqli_num_rows($result) > 0)
+				if($result && pg_num_rows($result) > 0)
 				{
 
-					$user_data = mysqli_fetch_assoc($result);
+					$user_data = pg_fetch_assoc($result);
 					
 					if($user_data['password'] === $password)
 					{
@@ -35,8 +35,6 @@ session_start();
 					}
 				}
 			}
-			
-			echo "wrong username or password!";
 		}else
 		{
 			echo "wrong username or password!";

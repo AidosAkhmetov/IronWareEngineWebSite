@@ -1,20 +1,14 @@
 <?php
   require_once('config/db.php');
-  require_once('lib/pdo_db.php');
+  require_once('connection.php');
   require_once('models/Transaction.php');
-  $user = 'root';
+  $user = 'postgres';
   $password = '';
   $db = 'ironware';
   $host = 'localhost';
   
-  $link = mysqli_init();
-  $success = mysqli_real_connect(
-       $link,
-       $host,
-       $user,
-       $password,
-       $db
-  );
+  $link = pg_init();
+  $success = pg_real_connect($link,"host='localhost' port='5433' dbname='ironware' user='postgres' password=''")
 
   // Instantiate Transaction
   $transaction = new Transaction();

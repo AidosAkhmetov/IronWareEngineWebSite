@@ -1,31 +1,30 @@
 <?php
-	/* 
-   *  PDO DATABASE CLASS
-   *  Connects Database Using PDO
-	 *  Creates Prepeared Statements
-	 * 	Binds params to values
-	 *  Returns rows and results
-   */
 class Database {
-	private $host = DB_HOST;
-	private $user = DB_USER;
-	private $pass = DB_PASS;
-	private $dbname = DB_NAME;
+	private $host = "localhost";
+	private $user = "postgres";
+	private $port = "5433";
+	private $pass = "";
+	private $dbname = "ironware";
 	
 	private $dbh;
 	private $error;
 	private $stmt;
+	private	$con; 
 	
 	public function __construct() {
 		// Set DSN
-		$dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbname;
+		$dsn = 'pgsql:host=$host;port=$port;dbname=$dbname;';
+
 		$options = array (
 			PDO::ATTR_PERSISTENT => true,
 			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION 
 		);
-		// Create a new PDO instanace
+		// Create a new PDO instanace	$pdo = new PDO('mysql:host=localhost;dbname=test', $user, $pass);
 		try {
-			$this->dbh = new PDO ($dsn, $this->user, $this->pass, $options);
+			$this->dbh = new PDO('pgsql:host=$host;port=5433;dbname=$dbname;',$this->user,$this->pass, $options);
+			if ($this->dbh) {
+			echo "Connected to the  database successfully!";
+			}
 		}		// Catch any errors
 		catch ( PDOException $e ) {
 			$this->error = $e->getMessage();
@@ -34,7 +33,8 @@ class Database {
 	
 	// Prepare statement with query
 	public function query($query) {
-		$this->stmt = $this->dbh->prepare($query);
+		/*$con = pg_connect("host='localhost' port='5433' dbname='ironware' user='postgres' password=''");*/
+		$this->stmt = pg_prepare($con,$query);
 	}
 	
 	// Bind values

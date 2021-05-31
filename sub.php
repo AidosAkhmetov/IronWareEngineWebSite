@@ -43,7 +43,7 @@ session_start();
       <div class="form-row">
        <input type="text" name="first_name" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="First Name">
        <input type="text" name="last_name" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Last Name">
-       <input type="email" name="email" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Email Address">
+       <input type="email" name="email" class="form-control mb-3 StripeElement StripeElement--empty" value="<?php echo $user_data['email']; ?>" placeholder="Email Address">
         <div id="card-element" class="form-control">
           <!-- a Stripe Element will be inserted here. -->
         </div>

@@ -3,7 +3,7 @@
 	class Database 
 	{
 		private $servername = "localhost";
-		private $username   = "root";
+		private $username   = "postgres";
 		private $password   = "";
 		private $dbname = "ironware";
 		public $con;
@@ -12,7 +12,7 @@
 		public function __construct()
 		{
 			try {
-				$this->con = new mysqli($this->servername, $this->username, $this->password, $this->dbname);	
+				$this->con = $con = pg_connect("host='localhost' port='5433' dbname='ironware' user='postgres' password=''");	
 			} catch (Exception $e) {
 				echo $e->getMessage();
 			}
@@ -33,15 +33,19 @@
 		// Fetch customer records for show listing
 		public function displayRecord()
 		{
-			$sql = "SELECT * FROM $this->customerTable";
-			$query = $this->con->query($sql);
+			$query = "SELECT * FROM itemss";
+			pg_query($this->con, $query);
+			$data=pg_query($this->con, $query);
+			return $data;
 			$data = array();
-			if ($query->num_rows > 0) {
+			if (pg_num_rows($data) > 0) {
 				while ($row = $query->fetch_assoc()) {
 					$data[] = $row;
 				}
+				echo "true";
 				return $data;
 			}else{
+				echo "false";
 				return false;
 			}
 		}
@@ -61,9 +65,10 @@
 
 
 		public function totalRowCount(){
-			$sql = "SELECT * FROM $this->customerTable";
-			$query = $this->con->query($sql);
-			$rowCount = $query->num_rows;
+			$query = "SELECT * FROM itemss";
+			pg_query($this->con,$query);
+			$result=pg_query($this->con,$query);
+			$rowCount = pg_num_rows($result);
 			return $rowCount;
 		}
 

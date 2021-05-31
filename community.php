@@ -12,9 +12,6 @@ session_start();
     $customers = $dbObj->displayRecord();
     echo $customers;
   }
-  else{
-    echo "wrong";
-  }
 
 ?>
 <!DOCTYPE html>

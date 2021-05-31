@@ -20,7 +20,7 @@ session_start();
       //save to database
       $user_id = random_num(20);
       $id=1;
-      $query = "INSERT INTO Customers (id, email, name, surname, age, password) values ('$id','$email','$user_name','$last_name','$age','$password')";
+      $query = "insert into customers(id,email,name,surname,age,password) values ('$id','$email','$user_name','$last_name','$age','$password')";
 
       pg_query($con, $query);
 
