@@ -1,14 +1,20 @@
 <?php
   require_once('config/db.php');
-  require_once('connection.php');
+  require_once('lib/pdo_db.php');
   require_once('models/Transaction.php');
-  $user = 'postgres';
+  $user = 'root';
   $password = '';
   $db = 'ironware';
   $host = 'localhost';
   
-  $link = pg_init();
-  $success = pg_real_connect($link,"host='localhost' port='5433' dbname='ironware' user='postgres' password=''")
+  $link = mysqli_init();
+  $success = mysqli_real_connect(
+       $link,
+       $host,
+       $user,
+       $password,
+       $db
+  );
 
   // Instantiate Transaction
   $transaction = new Transaction();
@@ -44,7 +50,7 @@ session_start();
   <li  class="dropdown"><a href="javascript:void(0)" class="dropbtn"><?php echo $user_data['user_name']; ?></a>
     <div class="dropdown-content">
           <a href="profile.php">Profile</a>
-          <a href="#">Settings</a>
+          <a href="myquestion.php">My Questions</a>
           <a href="transaction.php">Transaction</a>
           <a href="logout.php">Logout</a>
 
@@ -66,7 +72,6 @@ session_start();
     <table class="table table-striped">
       <thead>
         <tr>
-          <th>Transaction ID</th>
           <th>Product</th>
           <th>Amount</th>
           <th>Date</th>
@@ -76,7 +81,6 @@ session_start();
       <tbody>
         <?php foreach($transactions as $t): ?>
           <tr>
-            <td><?php echo $t->id; ?></td>
             <td><?php echo $t->product; ?></td>
             <td><?php echo sprintf('%.2f', $t->amount / 100); ?> <?php echo strtoupper($t->currency); ?></td>
             <td><?php echo $t->created_at; ?></td>

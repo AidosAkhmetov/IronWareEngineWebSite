@@ -27,6 +27,7 @@ $transactionData = [
   'id' => $charge->id,
   'customer_id' => $charge->customer,
   'product' => $charge->description,
+  'email' => $email,
   'amount' => $charge->amount,
   'currency' => $charge->currency,
   'status' => $charge->status,

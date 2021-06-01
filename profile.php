@@ -12,31 +12,31 @@
 <head>
 <title>Profile</title>
 <link rel="stylesheet" href="css/profile.css ">
+ <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+ 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 </head>
 <body>
-<ul class="nav">
+      <ul class="nav">
   <li><a href="index.php">Home</a></li>
-  <li><a href="documentation.php">Documentation</a></li>
-  <li><a href="community.php">Community</a></li>
+  <li><a href="doc.php">Documentation</a></li>
+  <li><a href="items.php">Community</a></li>
   <li><a href="download.php">Download</a></li>
-  <li class="dropdown"><a href="javascript:void(0)" class="dropbtn"><?php echo $user_data['user_name']; ?></a>
+  <li  class="dropdown"><a href="javascript:void(0)" class="dropbtn"><?php echo $user_data['user_name']; ?></a>
     <div class="dropdown-content">
           <a href="profile.php">Profile</a>
-          <a href="#">Settings</a>
+          <a href="myquestion.php">My Question</a>
           <a href="transaction.php">Transaction</a>
           <a href="logout.php">Logout</a>
 
       </div>
       </li>
-</ul>
-  
+</ul>  
 	<div class="container">
-		<form action="" method="post">
-			<a href="edit.php"style="float:right; width: 70px; background-color: white;" name="edit">
-			  Edit	
-			</a>
-	    </form>
-	    <div class="wrapper">
+		
+	    <div class="wrapper" style="border-radius: 10px;">
            <?php 
            # $q = mysql_query($db,"SELECT * FROM users where user_name='$_SESSION[login_user]' ;");
            ?>
@@ -73,17 +73,22 @@
 	       		<input class="input" type="password" disabled value="<?php echo $user_data['password']?>">
 	       		<br><hr>
 	       		</div>
-				<div class="inputfield">
-	       		<label for="ps">transaction ID</label>
-	       		<input class="input" type="text" disabled value="">
-	       		<br><hr>
-	       		</div>
+		
 	       		
 
-	       		<a href="changeps.php">Change Password</a> 
-	    </div>
+	       		<a style="text-decoration: none;" href="changeps.php">Change Password</a> 
+	         <form action="" method="post">
+      <a href="edit.php" style="text-decoration: none;float:right; width: 70px; background-color: white;" name="edit">
+        Edit  
+      </a>
+      </form>
+      </div>
 	</div>
 <style type="text/css">
+  body{
+    margin:0;
+    padding:0;
+  }
 	.nav{
   font-size: 16px;
     font-weight: bold;

@@ -9,24 +9,28 @@
 <html>
 <head>
 	<link rel="stylesheet" href="css/profile.css ">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
 
 	</head>
 <body>
-	<ul class="nav">
+      <ul class="nav">
   <li><a href="index.php">Home</a></li>
-  <li><a href="documentation.php">Documentation</a></li>
-  <li><a href="community.php">Community</a></li>
+  <li><a href="doc.php">Documentation</a></li>
+  <li><a href="items.php">Community</a></li>
   <li><a href="download.php">Download</a></li>
-  <li class="dropdown"><a href="javascript:void(0)" class="dropbtn"><?php echo $user_data['user_name']; ?></a>
+  <li  class="dropdown"><a href="javascript:void(0)" class="dropbtn"><?php echo $user_data['user_name']; ?></a>
     <div class="dropdown-content">
           <a href="profile.php">Profile</a>
-          <a href="#">Settings</a>
+          <a href="myquestion.php">My Question</a>
           <a href="transaction.php">Transaction</a>
           <a href="logout.php">Logout</a>
 
       </div>
       </li>
-</ul>
+</ul>  
+
 	<?php
 	include_once('connection.php'); 
 	if(isset($_POST['Submit'])){
@@ -50,7 +54,7 @@
 	}
 }
 	?>
-	  <p style="color:red;"><?php echo $_SESSION['msg1'];?></p>
+	  <!-- <p style="color:red;"><?php echo $_SESSION['msg1'];?></p> -->
     <!--<p style="color: white;"><?php echo $_SESSION['msg1'];?><?php $_SESSION['msg1'] =""; ?></p>--->
 	<form name="chngpwd" action="" method="post" onSubmit="return valid();">
 		<h3>Change Password</h3>
@@ -77,8 +81,13 @@
    				<a href="profile.php">Back Profile</a>
    				<input type="submit" name="Submit" value="Change Password" />
    	</form>
-
+   </div>
+ </div>
   <style type="text/css">
+body{
+  margin: 0;
+  padding: 0;
+}
    .nav{
   font-size: 16px;
     font-weight: bold;
@@ -128,6 +137,7 @@ li.dropdown {
   display: block;
 }
   	form{
+      border-radius: 8px;
   		margin-top: 50px;
   		padding-top: 80px;
   		text-align: center;

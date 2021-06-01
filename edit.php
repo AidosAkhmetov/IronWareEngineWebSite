@@ -13,22 +13,23 @@
 <title>Edit Profile</title>
 <link rel="stylesheet" href="css/profile.css ">
 </head>
-<body>
-		<ul class="nav">
+<body> 
+     <ul class="nav">
   <li><a href="index.php">Home</a></li>
-  <li><a href="documentation.php">Documentation</a></li>
-  <li><a href="community.php">Community</a></li>
+  <li><a href="doc.php">Documentation</a></li>
+  <li><a href="items.php">Community</a></li>
   <li><a href="download.php">Download</a></li>
-  <li class="dropdown"><a href="javascript:void(0)" class="dropbtn"><?php echo $user_data['user_name']; ?></a>
+  <li  class="dropdown"><a href="javascript:void(0)" class="dropbtn"><?php echo $user_data['user_name']; ?></a>
     <div class="dropdown-content">
           <a href="profile.php">Profile</a>
-          <a href="#">Settings</a>
+          <a href="myquestion.php">My Question</a>
           <a href="transaction.php">Transaction</a>
           <a href="logout.php">Logout</a>
 
       </div>
       </li>
-</ul>
+</ul>  
+
   
 
   <div class="wrapper">

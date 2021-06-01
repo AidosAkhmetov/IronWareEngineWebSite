@@ -6,31 +6,33 @@ session_start();
 
 
   if($_SERVER['REQUEST_METHOD'] == "POST")
-  {
+   {
     //something was posted
     $user_name = $_POST['user_name'];
     $last_name = $_POST['last_name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
     $age = $_POST['age'];
+       
     if(!empty($user_name) && !empty($password) && !is_numeric($user_name) && !empty($last_name) && !empty($email))
     {
 
       //save to database
       $user_id = random_num(20);
-      $query = "insert into user_data (user_id,user_name,last_name,email,age,password) values ('$user_id','$user_name','$last_name','$email','$age','$password')";
+      $id=1;
+      $query = "INSERT INTO Customers (id, email, name, surname, age, password) values ('$id','$email','$user_name','$last_name','$age','$password')";
 
-      mysqli_query($con, $query);
+      pg_query($con, $query);
 
       header("Location: login.php");
       die;
+
     }else
     {
       echo "Please enter some valid information!";
     }
-  }
+    }
 ?>
-
 
 
 <!DOCTYPE html>
